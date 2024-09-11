@@ -4,7 +4,9 @@
 
 In this repository you can find the newest preprint version of the book *Picturing Quantum Software: An Introduction to the ZX-Calculus and Quantum Compilation*, written by Aleks Kissinger and John van de Wetering. <b>Download the latest version of the PDF [here](https://github.com/zxcalc/book/releases/latest/download/pqs.pdf), or under _Releases_ on the right side of this page.</b>
 
-This copy is provided under the Creative Commons [Attribution-NonCommercial 4.0 International Licence](https://creativecommons.org/licenses/by-nc/4.0/), meaning you are free to distribute copies and adapt the material, as long as you give appropriate credit to the source material and do not use the material for commercial purposes.
+A black and white version for print and/or readers with limited colour vision is also available [here](https://github.com/zxcalc/book/releases/latest/download/pqs-bw.pdf).
+
+This book is provided under the Creative Commons [Attribution-NonCommercial 4.0 International Licence](https://creativecommons.org/licenses/by-nc/4.0/), meaning you are free to distribute copies and adapt the material, as long as you give appropriate credit to the source material and do not use the material for commercial purposes.
 
 If you find any errors or want to suggest any changes, feel free to leave an [Issue](https://github.com/zxcalc/book/issues). If you do so, please note which version of the book you are using (look under About This Version at the start of your copy of the book).
 
