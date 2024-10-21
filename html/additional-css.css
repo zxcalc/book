@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400; /* Regular weight */
+}
+a {
+    color: darkred;
+}
+a:hover {
+    color: #8B0000; /* A darker red */
+}
+
+/* Styling for the 'proof.' at start of proof environment */
+.proof .cmti-10x-x-109 {
+    text-decoration: underline;
+    /*background-color: darkred;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;*/
+/*    float: right;*/
+}
+
+/* Initially hide the content of the proof div */
+.proof-content {
+    display: none;
+}
+
+.proof {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* When the proof is collapsed, reduce the empty space */
+.proof.collapsed {
+    padding-bottom: 0;   /* Remove padding at the bottom */
+    margin-bottom: 10px; /* Reduce the margin below the button */
+}
+
+.toggle-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border: none;
+}
+
+/* Adjust the button position when collapsed */
+.proof.collapsed .toggle-btn {
+    margin-top: -20px; /* Adjust the margin above the button to move it up */
+}
+
+/* Global toggle button styling */
+.global-toggle-btn {
+    position: fixed;  /* Keep it fixed in the viewport */
+    top: 20px;        /* Distance from the top */
+    left: 20px;       /* Distance from the left */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer;  /* Cursor change to indicate clickable */
+    z-index: 1000;    /* Ensure it appears above other content */
+    background-color: darkred;
+    color: white;
+    border: none;
+}

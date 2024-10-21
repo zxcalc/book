@@ -1,0 +1,365 @@
+ 
+/* start css.sty */
+.cmr-5{font-size:45%;}
+.cmr-7{font-size:63%;}
+.cmr-10{font-size:90%;}
+.cmmi-7{font-size:63%;font-style: italic;}
+.cmmi-10{font-size:90%;font-style: italic;}
+.cmsy-7{font-size:63%;}
+.cmsy-10{font-size:90%;}
+.cmr-10x-x-109{}
+.cmbx-10x-x-109{ font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-8{font-size:72%;font-weight: bold;}
+.cmbsy-8{font-weight: bold;}
+.cmbsy-8{font-weight: bold;}
+.cmbsy-6{font-size:54%;font-weight: bold;}
+.cmbsy-6{font-weight: bold;}
+.cmbsy-6{font-weight: bold;}
+.cmex-10x-x-109{}
+.cmex-8{font-size:72%;}
+.cmex-7x-x-85{font-size:54%;}
+.msam-10x-x-109{}
+.msam-10x-x-80{font-size:72%;}
+.msam-7x-x-85{font-size:54%;}
+.msbm-10x-x-109{}
+.msbm-10x-x-80{font-size:72%;}
+.msbm-7x-x-85{font-size:54%;}
+.stmary-10x-x-109{}
+.stmary-8{font-size:72%;}
+.stmary-6{font-size:54%;}
+.cmr-8{font-size:72%;}
+.cmr-6{font-size:54%;}
+.cmmi-10x-x-109{font-style: italic;}
+.cmmi-8{font-size:72%;font-style: italic;}
+.cmmi-6{font-size:54%;font-style: italic;}
+.cmsy-10x-x-109{}
+.cmsy-8{font-size:72%;}
+.cmsy-6{font-size:54%;}
+.cmtt-10x-x-109{font-family: monospace,monospace;}
+.cmtt-10x-x-109{font-family: monospace,monospace;}
+.cmr-17{font-size:154%;}
+.cmr-12{font-size:109%;}
+.cmti-10x-x-109{ font-style: italic;}
+.cmtt-10{font-size:90%;font-family: monospace,monospace;}
+.cmtt-10{font-family: monospace,monospace;}
+.cmbxti-10x-x-109{ font-weight: bold; font-style: italic;}
+@media print {span.next {visibility:hidden;}}
+p{margin-top:0;margin-bottom:0}
+p.indent{text-indent:0;}
+p + p{margin-top:1em;}
+p + div, p + pre {margin-top:1em;}
+div + p, pre + p {margin-top:1em;}
+a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+@media print {div.crosslinks {visibility:hidden;}}
+table.tabular{border-collapse: collapse; border-spacing: 0;}
+a img { border-top: 0; border-left: 0; border-right: 0; }
+center { margin-top:1em; margin-bottom:1em; }
+td center { margin-top:0em; margin-bottom:0em; }
+.Canvas { position:relative; }
+math { text-indent: 0em; }
+body{ margin:1em auto; max-width:80ch; padding:0 .62em; }
+h1,h2,h3,h4,h5 { line-height:1.2; }
+@media print{ body{ max-width:none } }
+.partHead, .likepartHead { font-size: 2em; }
+.chapterHead, .likechapterHead { font-size: 1.7411em; }
+.sectionHead, .likesectionHead { font-size: 1.5157em; }
+.subsectionHead, .likesubsectionHead { font-size: 1.3195em; }
+.subsubsectionHead, .likesubsubsectionHead { font-size: 1.1487em; }
+ @media (prefers-color-scheme: dark) { img[src^="main_html"]{filter: invert(1); } } 
+ body { background-color: Canvas; color: CanvasText; color-scheme: light dark; } 
+li p.indent { text-indent: 0em }
+li p:first-child{ margin-top:0em; }
+li p:last-child, li div:last-child { margin-bottom:0.5em; }
+li p:first-child{ margin-bottom:0; }
+li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+.enumerate1 {list-style-type:decimal;}
+.enumerate2 {list-style-type:lower-alpha;}
+.enumerate3 {list-style-type:lower-roman;}
+.enumerate4 {list-style-type:upper-alpha;}
+div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+div.newtheorem .head{font-weight: bold;}
+.obeylines-h,.obeylines-v {white-space: nowrap; }
+div.obeylines-v p { margin-top:0; margin-bottom:0; }
+.overline{ text-decoration:overline; }
+.overline img{ border-top: 1px solid black; }
+td.displaylines {text-align:center; white-space:nowrap;}
+.centerline {text-align:center;}
+.rightline {text-align:right;}
+pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+.fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+div.fbox {display:table}
+div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+div.minipage{width:100%;}
+div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+div.center div {text-align: left;}
+div.flushright, div.flushright div.flushright {text-align: right;}
+div.flushright div {text-align: left;}
+div.flushleft {text-align: left;}
+.underline{ text-decoration:underline; }
+.underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+.framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.framebox-c {text-align:center;}
+.framebox-l {text-align:left;}
+.framebox-r {text-align:right;}
+span.thank-mark{ vertical-align: super }
+span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+code.verb{font-family:monospace,monospace;}
+div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+table.tabular td p{margin-top:0em;}
+table.tabular {margin-left: auto; margin-right: auto;}
+td p:first-child{ margin-top:0em; }
+td p:last-child{ margin-bottom:0em; }
+div.td00{ margin-left:0pt; margin-right:0pt; }
+div.td01{ margin-left:0pt; margin-right:5pt; }
+div.td10{ margin-left:5pt; margin-right:0pt; }
+div.td11{ margin-left:5pt; margin-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+td.td00{ padding-left:0pt; padding-right:0pt; }
+td.td01{ padding-left:0pt; padding-right:5pt; }
+td.td10{ padding-left:5pt; padding-right:0pt; }
+td.td11{ padding-left:5pt; padding-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.hline hr, .cline hr{ height : 0px; margin:0px; }
+.hline td, .cline td{ padding: 0; }
+.hline hr, .cline hr{border:none;border-top:1px solid black;}
+.hline {border-top: 1px solid black;}
+.hline + .vspace:last-child{display:none;}
+.hline:first-child{border-bottom:1px solid black;border-top:none;}
+.tabbing-right {text-align:right;}
+div.float, div.figure {margin-left: auto; margin-right: auto;}
+div.float img {text-align:center;}
+div.figure img {text-align:center;}
+.marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+.marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+.reversemarginpar{float:left;}
+.equation td{text-align:center; vertical-align:middle; }
+td.eq-no{ width:5%; }
+table.equation { width:100%; } 
+div.math-display, div.par-math-display{text-align:center;}
+.array-hline,.array-cline{ border-top: 1px solid black; height:0px; }
+.array-hline + .array-vspace:last-child{display:none;}
+.hline-mtd, .array-hline td{ display:none }
+.array-hline + .array-row:last-child{display:none;}
+.array-hline:first-child{border-bottom:1px solid black;border-top:none;}
+math .texttt { font-family: monospace; }
+math .textit { font-style: italic; }
+math .textsl { font-style: oblique; }
+math .textsf { font-family: sans-serif; }
+math .textbf { font-weight: bold; }
+mo.MathClass-op + mi{margin-left:0.3em}
+mi + mo.MathClass-op{margin-left:0.3em}
+ math mstyle[mathvariant="bold"] { font-weight: bold; font-style: normal; } 
+ math mstyle[mathvariant="normal"] { font-weight: normal; font-style: normal; } 
+.partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+.chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+.index-item, .index-subitem, .index-subsubitem {display:block}
+div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+div.caption span.id{font-weight: bold; white-space: nowrap; }
+h1.partHead{text-align: center}
+p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+.paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+.subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+.verse{white-space:nowrap; margin-left:2em}
+div.maketitle {text-align:center;}
+h2.titleHead{text-align:center;}
+div.maketitle{ margin-bottom: 2em; }
+div.author, div.date {text-align:center;}
+div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+div.author{white-space: nowrap;}
+h1.partHead{text-align: center}
+ .chapterToc, .likechapterToc {margin-left:0em;}
+ .likesectionToc, .sectionToc {margin-left:1em;}
+ .likesubsectionToc, .subsectionToc {margin-left:2em;}
+ .likesubsectionToc, .subsectionToc {margin-left:2em;}
+ .likesubsubsectionToc, .subsubsectionToc {margin-left:3em;}
+.paragraphToc, .likeparagraphToc {margin-left:4em;}
+.subparagraphToc, .likesubparagraphToc {margin-left:5em;}
+figure.float, div.figure {margin-left: auto; margin-right: auto;}
+figure.figure {text-align:center;}
+figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+p + figcaption, img + figcaption{margin-top: 1em;}
+.equation-star td{text-align:center; vertical-align:middle; }
+table.equation-star { width:100%; } 
+.boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
+mtd.align-odd{margin-left:2em; text-align:right;}
+mtd.align-even{margin-right:2em; text-align:left;}
+dl.enumerate {display:grid; grid-template-columns: 3ch 1fr; align-items: top; row-gap:1ch;}
+dd.enumerate {margin-left: 0;}
+.rotatebox{display: inline-block;}
+div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+table.tabular td p{margin-top:0em;}
+table.tabular {margin-left: auto; margin-right: auto;}
+td p:first-child{ margin-top:0em; }
+td p:last-child{ margin-bottom:0em; }
+div.td00{ margin-left:0pt; margin-right:0pt; }
+div.td01{ margin-left:0pt; margin-right:5pt; }
+div.td10{ margin-left:5pt; margin-right:0pt; }
+div.td11{ margin-left:5pt; margin-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+td.td00{ padding-left:0pt; padding-right:0pt; }
+td.td01{ padding-left:0pt; padding-right:5pt; }
+td.td10{ padding-left:5pt; padding-right:0pt; }
+td.td11{ padding-left:5pt; padding-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.hline hr, .cline hr{ height : 0px; margin:0px; }
+.hline td, .cline td{ padding: 0; }
+.hline hr, .cline hr{border:none;border-top:1px solid black;}
+.hline {border-top: 1px solid black;}
+.hline + .vspace:last-child{display:none;}
+.hline:first-child{border-bottom:1px solid black;border-top:none;}
+/* end css.sty */
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400; /* Regular weight */
+}
+a {
+    color: darkred;
+}
+a:hover {
+    color: #8B0000; /* A darker red */
+}
+
+
+.svg-diagram {
+    transform: scale(1.5);        /* Scale the object by 150% */
+    transform-origin: center;     /* Keep scaling centered */
+    display: block;               /* Treat as a block-level element */
+    margin: 30px auto;            /* Increase vertical margin */
+    padding: 20px;                /* Add extra padding to ensure space */
+    max-width: 60%;              /* Ensure diagram fits within the container */
+}
+
+
+/* Styling for the 'proof.' at start of proof environment */
+.proof .cmti-10x-x-109 {
+    text-decoration: underline;
+    /*background-color: darkred;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;*/
+/*    float: right;*/
+}
+
+/* Initially hide the content of the proof div */
+.proof-content {
+    display: none;
+}
+
+.proof {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* When the proof is collapsed, reduce the empty space */
+.proof.collapsed {
+    padding-bottom: 0;   /* Remove padding at the bottom */
+    margin-bottom: 10px; /* Reduce the margin below the button */
+}
+
+.toggle-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border: none;
+}
+
+/* Adjust the button position when collapsed */
+.proof.collapsed .toggle-btn {
+    margin-top: -20px; /* Adjust the margin above the button to move it up */
+}
+
+/* Global toggle button styling */
+.global-toggle-btn {
+    position: fixed;  /* Keep it fixed in the viewport */
+    bottom: 20px;        /* Distance from the top */
+    right: 20px;       /* Distance from the left */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer;  /* Cursor change to indicate clickable */
+    z-index: 1000;    /* Ensure it appears above other content */
+    background-color: darkred;
+    color: white;
+    border: none;
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.hamburger-menu div {
+    height: 4px;
+    background-color: darkred;
+}
+
+/* Navigation Menu */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+.menu-container.active {
+    transform: translateX(0);
+}
+
+.menu-container ul {
+    list-style-type: none;
+    padding: 50px 0 0 0; /* Add padding to push the list down */
+    margin: 0;
+}
+
+.menu-container li {
+    padding: 5px;
+    border-bottom: 1px solid #444;
+}
+
+.menu-container li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-container li a:hover {
+    text-decoration: underline;
+}
+
+/* Subsection styling */
+.subsection {
+    padding-left: 20px;
+}
+
+.menu-container li.subsection {
+    padding-left: 20px; /* Add indentation for subsections */
+    font-size: 0.8em;    /* Optionally, make subsections slightly smaller */
+}
