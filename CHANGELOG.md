@@ -1,6 +1,6 @@
 
 
-# v1.1.0 - To be released
+# v1.1.0 - 22-10-2024
 Lots of fixes for mathematical typos and fixes to improve consistency across sections and chapters.
 About 6 pages of new content.
 
