@@ -1,0 +1,286 @@
+\RequirePackage{etex}
+% \usepackage[T1]{fontenc}
+\usepackage{natbib}
+
+\newcommand{\bookversion}{1.2.0\xspace}
+\newcommand{\bookdate}{August 2025\xspace}
+
+\newif\ifsolutions % when set to true, additional text appears containing solutions
+\solutionsfalse
+% \solutionstrue
+
+\newif\ifcourse % To remove stuff that shouldn't be present for the preprint release
+% \coursefalse
+\coursetrue
+
+\newif\ifblackwhite % When set to True, makes the book use black-and-white style, instead of colored ones.
+\blackwhitefalse
+% \blackwhitetrue
+
+\newif\iftikzitdraft % Whether `draft' mode should be used for tikzit, which uses pre-built PDF files.
+\tikzitdraftfalse
+% \tikzitdrafttrue
+
+\newcommand{\ismain}{0} % For chapters to distinguish whether they are being called as the main file, or as a subfile of main.tex
+
+\renewcommand{\theenumi}{\arabic{enumi}.}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+% \usepackage{lmodern}
+
+\usepackage{morewrites} % Prevent ``No room for a new \write'' error.
+
+\usepackage{xr} % for having references to external documents
+
+% \usepackage[activate=true,
+%     final,
+%     tracking=true,
+%     % kerning=true,
+%     % spacing=true,
+%     factor=1100,
+%     stretch=10,
+%     shrink=10]{microtype}
+% \microtypecontext{spacing=nonfrench}
+
+\newcommand{\bw}{0}
+\newcommand{\showoptional}{1}
+
+\newcommand{\chapterquote}[2]{%
+\begin{quote}
+    \ifblackwhite
+    \color{gray!50!black}
+    \else
+    \color{blue!50!black}
+    \fi
+  #1
+
+  \medskip
+
+  \hfill - \textit{#2}
+\end{quote}
+
+\bigskip
+}
+
+% \font\omding=omding
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{xspace,enumerate,epsfig}
+\usepackage{graphicx}
+\graphicspath{{.}{./figures/}}
+\usepackage{marvosym}
+\usepackage{bm}
+\usepackage{tabu}
+\tabulinesep=2mm
+
+\usepackage{stmaryrd}
+% \usepackage{docmute}
+\usepackage{subfiles}
+\usepackage{keycommand}
+
+%% enables using PDF figures in cache/, if they exist
+\iftikzitdraft
+    \usepackage[draft]{tikzit}
+    \else
+    \usepackage{tikzit}
+\fi
+\usepackage{nicematrix}
+% \usetikzlibrary{external}
+% \tikzexternalize[prefix=tikz-cache/]
+\input{notebook_refs.tex}
+
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+
+\ifblackwhite
+    \hypersetup{
+         colorlinks = true,
+         linkcolor = gray!50!black,
+         anchorcolor = gray!50!black,
+         citecolor = gray!50!black,
+         filecolor = gray!50!black,
+         urlcolor = gray!50!black
+    }
+    \else % use colours
+    \hypersetup{
+         colorlinks = true,
+         linkcolor = blue!70!black,
+         anchorcolor = blue!70!black,
+         citecolor = red!70!black,
+         filecolor = blue!70!black,
+         urlcolor = blue!70!black
+    }
+\fi
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage[all]{hypcap}
+
+\ifblackwhite
+    \input{circuits-bw.tikzdefs}
+    \input{circuits-bw.tikzstyles}
+\else
+    \input{circuits.tikzdefs}
+    \input{circuits.tikzstyles}
+\fi
+
+\usepackage[ruled,nofillcomment]{algorithm2e}
+\SetKwProg{Proc}{Procedure}{}{end}
+\newcommand{\comm}[1]{\textit{\color{zxgreenfg} #1}}
+\newcommand{\keyword}[1]{\textbf{\color{zxredfg} #1}}
+\SetCommentSty{comm}
+\SetKwSty{keyword}
+
+% \usepackage{palatino}
+
+\usepackage{ifthen}
+% \usepackage{makeidx}
+% \makeindex
+
+\newcommand{\dfnoindex}[1]{\textbf{#1}}
+
+% \newcommand{\dfnoindex}[1]{\textbf{\color{zxredfg} #1}}
+\newkeycommand{\df}[index=][1]{%
+% \ifthenelse{\equal{\commandkey{index}}{}}
+    % {\index{#1}}
+    % {\index{\commandkey{index}}}%
+\dfnoindex{#1}}
+
+
+% OURS
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{example*}[theorem]{Example*}
+\newtheorem{examples*}[theorem]{Examples*}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark*}[theorem]{Remark*}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{algo}[theorem]{Algorithm}
+
+\newtheorem{jupyter}[theorem]{Coding exercise}
+
+%\newtheoremstyle{exercise}{3pt}{3pt}{\color{red}}{}{\bf}{}{.5em}{}
+%\theoremstyle{exercise}
+\newtheorem{exer}{Exercise}[chapter]
+\newtheorem{exer*}[exer]{Exercise*}
+
+\usepackage{comment}
+
+\newenvironment{solution}{%
+    \mbox{}\newline
+    \textbf{Solution:} \dotfill\newline
+    }
+    {
+    \ifsolutions
+    \mbox{}\newline
+    \textbf{End Solution}\dotfill
+    \fi
+}
+
+\unless\ifsolutions
+\excludecomment{solution}
+\fi
+
+
+\newcommand{\TODOa}[1]{{\color{blue} [\textbf{TODO:} #1]}}
+\newcommand{\TODOj}[1]{{\color{green!50!black} [\textbf{TODO:} #1]}}
+\newcommand{\NOTEa}[1]{{\color{blue} [\textbf{a:} #1]}}
+\newcommand{\NOTEj}[1]{{\color{green!50!black} [\textbf{j:} #1]}}
+
+% HIDE TODOs and NOTEs
+\ifcourse
+\renewcommand{\TODOa}[1]{}
+\renewcommand{\TODOj}[1]{}
+\renewcommand{\NOTEa}[1]{}
+\renewcommand{\NOTEj}[1]{}
+\fi
+
+\newcommand{\CHECK}[1]{\marginpar{\scriptsize\bR \textbf{CHECK:} #1\e}}
+
+\newcommand{\breakrule}{{\bigskip\huge\bR$\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%$\e\bigskip}}
+
+\newcommand{\hint}[1]{\noindent\textit{Hint: #1}}
+
+
+\hyphenation{line-break line-breaks docu-ment triangle cambridge amsthdoc
+  cambridgemods baseline-skip author authors cambridgestyle en-vir-on-ment polar
+  ortho-normal}
+
+
+
+
+% \usepackage[color,leftbars]{changebar}
+\usepackage[color]{changebar}
+
+\def\cbB{\cbcolor{blue}\cbstart}
+\def\cbR{\cbcolor{red}\cbstart}
+
+%begin Bob's
+\usepackage{color}
+\def\bR{\begin{color}{red}} 
+\def\bB{\begin{color}{blue}}
+\def\bM{\begin{color}{magenta}}
+\def\bC{\begin{color}{cyan}}
+\def\bW{\begin{color}{white}}
+\def\bBl{\begin{color}{black}} 
+\def\bG{\begin{color}{green}}
+\def\bY{\begin{color}{yellow}}
+\def\e{\end{color}\xspace}
+\newcommand{\bit}{\begin{itemize}}
+\newcommand{\eit}{\end{itemize}\par\noindent}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}\par\noindent}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}\par\noindent}
+\newcommand{\beqa}{\begin{eqnarray*}}
+\newcommand{\eeqa}{\end{eqnarray*}\par\noindent}
+\newcommand{\beqn}{\begin{eqnarray}}
+\newcommand{\eeqn}{\end{eqnarray}\par\noindent}
+%end Bob's
+
+% hide certain colours
+
+% \def\bR{\begin{color}{black}} 
+% \def\bB{\begin{color}{black}}
+% \def\bM{\begin{color}{black}}
+% \def\bC{\begin{color}{black}}
+% \def\bW{\begin{color}{black}}
+% \def\bG{\begin{color}{black}}
+% \def\bY{\begin{color}{black}}
+
+
+
+%\NiceMatrixOptions{code-for-last-col = \color{highlight_text}\small}
+\newcommand{\bitpauli}[3]{\big(#1\,|\,#2\big)\,\textrm{\color{highlight_text}\small$\bm{#3}$ } }
+\DeclarePairedDelimiter{\inn}{\langle}{\rangle}
+
+%\newcommand{\lp}{\bm{0}}
+%\newcommand{\lm}{\bm{2}}
+%\newcommand{\lpi}{\bm{1}}
+%\newcommand{\lmi}{\bm{3}}
+
+\newcommand{\lp}{\texttt{\color{highlight_text}\small\textbf{+}}}
+\newcommand{\lm}{\texttt{\color{highlight_text}\small\textbf{-}}}
+\newcommand{\lpi}{\texttt{\color{highlight_text}\small\textbf{+$\bm{i}$}}}
+\newcommand{\lmi}{\texttt{\color{highlight_text}\small\textbf{-$\bm{i}$}}}
+
+
+\newcommand{\biggline}{\bigg|}
+% \DeclareMathOperator\Dom{Dom}
+% \DeclareMathOperator\Zer{Zer}
+% \DeclareMathOperator\Dim{Dim}
+\DeclareMathOperator\diag{diag}
+% \DeclareMathOperator\Re{Re}
+% \DeclareMathOperator\Im{Im}
+
+\setcounter{MaxMatrixCols}{20} % Needed if you want pmatrix with more than 10 columns

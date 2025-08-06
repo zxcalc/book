@@ -237,7 +237,19 @@ a:hover {
     margin: 30px auto;            /* Increase vertical margin */
     padding: 20px;                /* Add extra padding to ensure space */
     max-width: 60%;              /* Ensure diagram fits within the container */
+    background-color: white;    /* Useful for dark mode to ensure the diagram remains visible */
+    position: relative;         /* Since we have a white background, */
+    z-index: -1;                /*  we need to make sure it is behind other elements. */
 }
+
+.inline-diagram {
+    background-color: white;
+}
+
+.figure .inline-diagram {
+    padding: 20px;
+}
+
 
 
 /* Styling for the 'proof.' at start of proof environment */
@@ -354,7 +366,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Subsection styling */
+/* Subsection styling in menu*/
 .subsection {
     padding-left: 20px;
 }
@@ -362,4 +374,23 @@ a:hover {
 .menu-container li.subsection {
     padding-left: 20px; /* Add indentation for subsections */
     font-size: 0.8em;    /* Optionally, make subsections slightly smaller */
+}
+
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #FA8072;
+  }
+  a:hover {
+    color: #FF6A5A;
+  }
+  /*.toggle-btn {
+    background-color: #FA8072;
+  }*/
+  .hamburger-menu div {
+    background-color: #FA8072;
+  }
+  p {
+    color: #DDD;
+  }
 }

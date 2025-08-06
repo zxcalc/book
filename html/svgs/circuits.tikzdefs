@@ -1,0 +1,313 @@
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+\usepackage{keycommand}
+\usepackage{hyperref}
+
+% use defined colours wherever possible, so we can switch to B&W later
+\usepackage{color}
+
+% dark red and green used in titles and definitions
+\definecolor{zxredfg}{RGB}{100,0,0}
+\definecolor{zxgreenfg}{RGB}{0,50,0}
+
+% used in ZX-diagrams
+\definecolor{zxred}{RGB}{232, 165, 165}
+\definecolor{zxgreen}{RGB}{216, 248, 216}
+\definecolor{zxhad}{RGB}{255, 255, 130}
+\definecolor{zxpaulibox}{RGB}{221, 221, 255}
+\definecolor{zx_grey}{RGB}{211,211,211}
+
+% used to emphasise text/arrows in figures
+\definecolor{highlight}{RGB}{0, 0, 255}
+\definecolor{highlight_alt}{RGB}{255, 0, 0}
+\colorlet{highlight_text}{blue!50!gray}
+
+\usepackage{titlesec}
+\titleformat{\section}
+{\color{zxgreenfg}\normalfont\Large\bfseries}
+{\color{zxgreenfg}\thesection}{1em}{}
+\titleformat{\subsection}
+{\color{zxgreenfg}\normalfont\large\bfseries}
+{\color{zxgreenfg}\thesubsection}{1em}{}
+\usepackage{xspace}
+\usepackage{bm}
+
+\newcommand{\qb}[1]{\ensuremath{(\mathbb C^2)^{\otimes #1}}\xspace}
+\newcommand{\qbn}{\qb{n}\xspace}
+
+\newcommand{\zsp}[3]{Z{}_{#1}^{#2}[\textstyle{#3}]}
+\newcommand{\xsp}[3]{X{}_{#1}^{#2}[\textstyle{#3}]}
+\newcommand{\ket}[1]{\ensuremath{|{#1}\rangle\xspace}}
+\newcommand{\bra}[1]{\ensuremath{\langle {#1}|\xspace}}
+\newcommand{\braket}[2]{\ensuremath{\langle {#1}|{#2}\rangle\xspace}}
+\newcommand{\ketbra}[2]{\ensuremath{|{#1}\rangle\!\langle {#2}|\xspace}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle} % This command originally is an alias for \thinspace
+\newcommand{\degree}{\circ}
+\newcommand{\T}{{\hspace{0.75pt}T}}
+
+% \newcommand\D{\textrm{\footnotesize $D$}\xspace}
+\newcommand\sqrtD{\textrm{\footnotesize $\sqrt{D}$}\xspace}
+\newcommand\sqrttwo{\textrm{\footnotesize $\sqrt{2}$}\xspace}
+\newcommand\oneoverD{\ensuremath{{\textstyle{\frac{1}{D}}}}\xspace}
+\newcommand\oneoverDprime{\ensuremath{{\textstyle{\frac{1}{D'}}}}\xspace}
+\newcommand\oneoversqrtD{\ensuremath{{\textstyle{\frac{1}{\sqrt{D}}}}}\xspace}
+\newcommand\oneoversqrttwo{\ensuremath{{\textstyle{\frac{1}{\sqrt{2}}}}}\xspace}
+\newcommand\oneovertwo{\ensuremath{{\textstyle{\frac{1}{2}}}}\xspace}
+
+\newcommand{\NOT}{\text{NOT}\xspace}
+\newcommand{\CNOT}{\text{CNOT}\xspace}
+\newcommand{\CNOTs}{\text{CNOTs}\xspace}
+\newcommand{\CZ}{\text{CZ}\xspace}
+\newcommand{\CCZ}{\text{CCZ}\xspace}
+\newcommand{\CZs}{\text{CZs}\xspace}
+\newcommand{\TOF}{\text{TOF}\xspace}
+\newcommand{\sgn}{\text{sgn}\xspace}
+
+%%%% JOHN'S MACROS
+
+\newcommand{\intf}[1]{\left\llbracket #1 \right\rrbracket} % interpretation functor
+
+\newcommand{\abs}[1]{\ensuremath{|#1|}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+\newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+\newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+\newcommand{\D}{\ensuremath{\mathbb{D}}\xspace}
+\newcommand{\Zom}{\ensuremath{\mathbb{Z}[\omega]}\xspace}
+\newcommand{\Dom}{\ensuremath{\mathbb{D}[\omega]}\xspace}
+\newcommand{\id}{\ensuremath{I}}
+\newcommand{\tr}{\text{Tr}}
+\newcommand{\RM}{\text{RM}}
+\newcommand{\symd}{\mathbin{\Delta}\xspace} % Symmetric Difference operators
+\newcommand{\Symdi}[1]{\underset{\scriptstyle #1}{\scalebox{1.5}{$\symd$}}\,}
+\newcommand{\symdi}[1]{{\scalebox{1.5}{$\symd$}}_{#1}\,} 
+\newcommand{\powerset}{\ensuremath{\wp}}
+\newcommand{\F}[1]{\ensuremath{\mathbb F_{#1}}\xspace}
+\newcommand{\B}{\F{2}\xspace}
+\newcommand{\Odd}{\text{Odd}}
+\newcommand{\pauli}[1]{\ensuremath{\mathcal{P}_{#1}}\xspace}
+\newcommand{\cliff}[1]{\ensuremath{\mathcal{C}_{#1}}\xspace}
+\newcommand{\stab}[1]{\ensuremath{\text{Stab}(#1)}\xspace}
+\newcommand{\Prob}{\ensuremath{\text{Prob}}}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\Norm}[2]{\mathcal{N}_{#1}(#2)}
+\newcommand{\symp}[1]{\ensuremath{\text{Sp}(#1)}\xspace}
+\newcommand{\md}[1]{\ensuremath{\ (\text{mod } #1)}}
+% pauli projector
+\newcommand{\pproj}[2]{\Pi_{#1}^{(#2)}}
+
+
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{fadings}
+\usetikzlibrary{matrix}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.markings}
+
+\newcommand{\zxcalculus}{ZX-calculus\xspace}
+\newcommand{\zxdiagram}{ZX-diagram\xspace}
+\newcommand{\zxdiagrams}{ZX-diagrams\xspace}
+
+\newcommand{\zxspider}{\ensuremath{(\hyperref[fig:zx-rules]{\bm{sp}})}\xspace}
+\newcommand{\zxpi}{\ensuremath{(\hyperref[fig:zx-rules]{\bm \pi})}\xspace}
+\newcommand{\zxcolor}{\ensuremath{(\hyperref[fig:zx-rules]{\bm{cc}})}\xspace}
+\newcommand{\zxeuler}{\ensuremath{(\hyperref[fig:zx-rules]{\bm{eu}})}\xspace}
+\newcommand{\zxid}{\ensuremath{(\hyperref[fig:zx-rules]{\bm{id}})}\xspace}
+\newcommand{\zxhh}{\ensuremath{(\hyperref[fig:zx-rules]{\bm{hh}})}\xspace}
+\newcommand{\zxsc}{\ensuremath{(\hyperref[fig:zx-rules]{\bm{sc}})}\xspace}
+
+% derived rules
+% \zx...label is used to label the original equation, and \zx...
+% to refer back
+\newcommand{\zxgflabel}{\textbf{\textit{gf}}}
+\newcommand{\zxgf}{\ensuremath{(\hyperref[eq:zx-gadget-fusion]{\zxgflabel})}\xspace}
+
+\newcommand{\comp}[1]{\overline{#1}}
+
+\newcommand{\SpiderRule}{\zxspider}
+\newcommand{\FusionRule}{\SpiderRule}
+\newcommand{\PiRule}{\zxpi}
+\newcommand{\CopyRule}{\zxsc}
+\newcommand{\HadamardRule}{\zxcolor}
+\newcommand{\IdRule}{\zxid}
+\newcommand{\HHRule}{\zxhh}
+\newcommand{\BialgRule}{\zxsc}
+\newcommand{\StrongCompRule}{\BialgRule}
+\newcommand{\ScalarRule}{\ensuremath{(\hyperref[fig:zx-rules]{\bm s})}\xspace}
+\newcommand{\ZeroRule}{\ensuremath{(\hyperref[fig:zx-rules]{\bm{zo}})}\xspace}
+\newcommand{\HopfRule}{\eqref{eq:hopf-rule}\xspace}
+
+%% small versions
+\newcommand{\picopyrule}{{\footnotesize\PiCopyRule}}
+\newcommand{\strongcomprule}{{\footnotesize\StrongCompRule}}
+\newcommand{\bialgrule}{{\footnotesize\BialgRule}}
+\newcommand{\idrule}{{\footnotesize\IdRule}}
+\newcommand{\hadamardrule}{{\footnotesize\HadamardRule}}
+\newcommand{\hhrule}{{\footnotesize\HHRule}}
+\newcommand{\copyrule}{{\footnotesize\CopyRule}}
+\newcommand{\pirule}{{\footnotesize\PiRule}}
+\newcommand{\spiderrule}{{\footnotesize\SpiderRule}}
+\newcommand{\fusionrule}{{\footnotesize\SpiderRule}}
+\newcommand{\hopfrule}{{\footnotesize\HopfRule}}
+\newcommand{\scalarrule}{{\footnotesize\ScalarRule}}
+\newcommand{\zerorule}{{\footnotesize\ZeroRule}}
+
+%Make node for measuring in circuit
+\tikzset{meter/.append style={draw, inner sep=5, rectangle, font=\vphantom{A}, minimum width=20, line width=.4,
+ path picture={\draw[black] ([shift={(.1,.2)}]path picture bounding box.south west) to[bend left=70] ([shift={(-.1,.2)}]path picture bounding box.south east);\draw[black,-latex] ([shift={(0,.1)}]path picture bounding box.south) -- ([shift={(.25,-.05)}]path picture bounding box.north);}}}
+
+\newcommand{\namedeq}[1]{\,\begin{tikzpicture}
+  \begin{pgfonlayer}{nodelayer}
+    \node [style=none] at (0, 0.75) {\footnotesize $#1$};
+    \node [style=none] at (0, 0) {$=$};
+  \end{pgfonlayer}
+\end{tikzpicture}\,}
+\newcommand{\namedimplies}[1]{\,\begin{tikzpicture}
+  \begin{pgfonlayer}{nodelayer}
+    \node [style=none] at (0, 0.75) {\footnotesize $#1$};
+    \node [style=none] at (0, 0) {$\implies$};
+  \end{pgfonlayer}
+\end{tikzpicture}\,}
+\newcommand{\namedscalareq}[1]{\,\begin{tikzpicture}
+  \begin{pgfonlayer}{nodelayer}
+    \node [style=none] at (0, 0.75) {\footnotesize $#1$};
+    \node [style=none] at (0, 0) {$\scalareq$};
+  \end{pgfonlayer}
+\end{tikzpicture}\,}
+\newcommand{\namedmapsto}[1]{\,\begin{tikzpicture}
+  \begin{pgfonlayer}{nodelayer}
+    \node [style=none] at (0, 0.75) {\footnotesize $#1$};
+    \node [style=none] at (0, 0) {$\mapsto$};
+  \end{pgfonlayer}
+\end{tikzpicture}\,}
+
+\newcommand{\smalleqref}[1]{%
+    {\footnotesize\eqref{#1}}%
+}
+
+\newcommand{\smallref}[1]{%
+    {\footnotesize\ref{#1}}%
+}
+
+\newcommand{\scalareq}{\ensuremath{\propto}\xspace}
+
+\newcommand{\emptydiag}{\,\tikz{\node[style=empty diagram] (x) {};}\,}
+\newcommand{\emptydiagsmall}{\,\tikz{\node[style=empty diagram small] (x) {};}\,}
+
+\newcommand{\Zscalar}[1]{%
+  \,\tikz{\node[style=Z phase dot] (x) {\ensuremath{#1}};}\,%
+}
+
+\newcommand{\lollyphase}[1]{%
+  \,\tikz{%
+    \node [style=none] (1) at (-0.5, 0) {};
+    \node [style=none] (2) at (0.75, 0) {};
+    \draw (1.east) to (2.west);
+    \node [style=Z phase dot] (3) at (-0.5, 0) {\ensuremath{#1}};
+    \node [style=X phase dot] (4) at (0.75, 0) {$\pi$};
+    
+  }\,%
+}
+
+\newcommand{\Zphase}[1]{%
+  \,\tikz{%
+  \node [style=none] (1) at (-0.5, 0) {};
+  \node [style=none] (3) at (1.5, 0) {};
+  \draw (1) to (3);
+  \node [style=Z phase dot] (2) at (0.5, 0) {\ensuremath{#1}};
+  }
+}
+
+\newcommand{\Xphase}[1]{%
+  \,\tikz{%
+  \node [style=none] (1) at (-0.5, 0) {};
+  \node [style=none] (3) at (1.5, 0) {};
+  \draw (1) to (3);
+  \node [style=X phase dot] (2) at (0.50, 0) {\ensuremath{#1}};
+  }
+}
+
+
+
+
+
+\newkeycommand{\state}[type=][1]{%
+  \begin{tikzpicture}
+    \begin{pgfonlayer}{nodelayer}
+      \node [style=left state] (11) at (-0.5, 0) {$#1$};
+      \node [style=none] (15) at (1, 0) {};
+      \node [style=clabel] (16) at (0.5, 0.5) {$\commandkey{type}$};
+    \end{pgfonlayer}
+    \begin{pgfonlayer}{edgelayer}
+      \draw (11) to (15.center);
+    \end{pgfonlayer}
+\end{tikzpicture}}
+
+\newkeycommand{\effect}[type=][1]{%
+  \begin{tikzpicture}
+    \begin{pgfonlayer}{nodelayer}
+      \node [style=right state] (11) at (0.5, 0) {$#1$};
+      \node [style=none] (15) at (-1, 0) {};
+      \node [style=clabel] (16) at (-0.5, 0.5) {$\commandkey{type}$};
+    \end{pgfonlayer}
+    \begin{pgfonlayer}{edgelayer}
+      \draw (11) to (15.center);
+    \end{pgfonlayer}
+\end{tikzpicture}}
+
+\newkeycommand{\map}[tikzfig,itype=,otype=][1]{%
+  \begin{tikzpicture}[tikzfig]
+    \begin{pgfonlayer}{nodelayer}
+      \node [style=box] (0) at (0, 0) {$#1$};
+      \node [style=none] (1) at (1.5, 0) {};
+      \node [style=none] (2) at (-1.5, 0) {};
+      \node [style=clabel,fill=none] (3) at (-1, 0.5) {$\commandkey{itype}$};
+      \node [style=clabel,fill=none] (4) at (1, 0.5) {$\commandkey{otype}$};
+    \end{pgfonlayer}
+    \begin{pgfonlayer}{edgelayer}
+      \draw (0) to (1.center);
+      \draw (0) to (2.center);
+    \end{pgfonlayer}
+\end{tikzpicture}}
+
+\newcommand{\eulerboxes}[3]{%
+\begin{tikzpicture}[tikzfig]
+  \node[style=none](0) at (0,0) {};
+  \node[style=box,anchor=west,xshift=3mm] (1) at (0.east) {\!$Z\left(#1\right)$\!};
+  \node[style=box,anchor=west,xshift=3mm] (2) at (1.east) {\!$X\left(#2\right)$\!};
+  \node[style=box,anchor=west,xshift=3mm] (3) at (2.east) {\!$Z\left(#3\right)$\!};
+  \node[style=none,anchor=west,xshift=3mm](4) at (3.east) {};
+  \draw (0.center) -- (1) -- (2) -- (3) -- (4.center);
+\end{tikzpicture}}
+
+
+\makeatletter
+\newcommand{\boxshape}[3]{%
+\pgfdeclareshape{#1}{
+\inheritsavedanchors[from=rectangle] % this is nearly a rectangle
+\inheritanchorborder[from=rectangle]
+\inheritanchor[from=rectangle]{center}
+\inheritanchor[from=rectangle]{north}
+\inheritanchor[from=rectangle]{south}
+\inheritanchor[from=rectangle]{west}
+\inheritanchor[from=rectangle]{east}
+\backgroundpath{% this is new
+% store lower left in xa/ya and upper right in xb/yb
+\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+
+\@tempdima=#2
+\@tempdimb=#3
+
+\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya - \@tempdima}}
+\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yb + \@tempdima}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb + \@tempdimb}}
+\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya - \@tempdimb}}
+\pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@ya - \@tempdima}}
+\pgfpathclose
+}
+}}
+
+\boxshape{Ebox}{0pt}{5pt}
+\boxshape{Wbox}{5pt}{0pt}
+

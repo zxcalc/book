@@ -1,4 +1,13 @@
+# v1.2.0 - 06-08-2025
+53 new pages of text, mostly in expanded introductions, summaries and a new cheatsheet chapter.
 
+New or changed content:
+* Each chapter now has a more expanded introduction that more clearly explains the motivation of that chapter and what you can expect in it.
+* Each chapter now has an expanded "Summary: What to Remember" section with more diagrams.
+* Added a new Chapter 8 Cheatsheets with several convenient overviews of diagrams, rewrite rules and constructions used in the book. Note that this changes the chapter number of all the chapters coming after.
+* Expanded explanations on scalable notation. They are now briefly introduce in the Phase-free chapter, before expanded upon in the Universal Circuits chapter (Section 7.2). BREAKING CHANGE: We now represent the matrix for a collection of phase gadgets with a transpose, this makes the material using scalable notation in the Fault-tolerant computing chapter match the literature better.
+* Numerous typos and small bugs fixed.
+* The HTML version should now work better when the user is in darkmode.
 
 # v1.1.0 - 22-10-2024
 Lots of fixes for mathematical typos and fixes to improve consistency across sections and chapters.

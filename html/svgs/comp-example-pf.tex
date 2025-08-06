@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{xr}
+\externaldocument{../../main_html}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{keycommand}
+\usepackage{hyperref}
+\usepackage{tabu}
+\tabulinesep=2mm
+
+\let\originaleqref\eqref
+\renewcommand{\eqref}[1]{%
+\special{dvisvgm:raw <eqref>#1}%
+\originaleqref{#1}%
+\special{dvisvgm:raw </eqref>}%
+}
+
+\let\originalref\ref
+\renewcommand{\ref}[1]{%
+\special{dvisvgm:raw <ref>#1}%
+\originalref{#1}%
+\special{dvisvgm:raw </ref>}%
+}
+
+\let\originalhyperref\hyperref
+\renewcommand{\hyperref}[2][]{%
+\special{dvisvgm:raw <hyperref>#1}%
+\originalhyperref[#1]{#2}
+\special{dvisvgm:raw </hyperref>}%
+}
+
+\usepackage{tikzit}
+\input{circuits.tikzdefs}
+\input{circuits.tikzstyles}
+\usepackage[graphics,active,tightpage]{preview}
+% \PreviewEnvironment{equation*}
+\PreviewEnvironment{center}
+
+\begin{document}
+\tikzstyle{every picture}=[tikzfig]
+\begin{center}
+%
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (18) at (-2.5, 0) {};
+		\node [style=X dot] (7) at (-3.75, 0.75) {};
+		\node [style=Z dot] (11) at (-5.75, 0.75) {};
+		\node [style=none] (12) at (-4.75, 1.5) {};
+		\node [style=none] (13) at (-4.75, 0) {};
+		\node [style=X dot] (15) at (-7, 0) {};
+		\node [style=none] (19) at (-8, 0) {};
+		\node [style=none] (20) at (-1.5, 0) {};
+		\node [style=none] (21) at (-4.75, -1.25) {};
+		\node [style=none] (22) at (-6.25, 1.75) {};
+		\node [style=none] (23) at (-6.25, -0.25) {};
+		\node [style=none] (24) at (-3.25, -0.25) {};
+		\node [style=none] (25) at (-3.25, 1.75) {};
+		\node [style=Z dot] (26) at (7.25, 0) {};
+		\node [style=X dot] (27) at (6, 0.75) {};
+		\node [style=Z dot] (28) at (4, 0.75) {};
+		\node [style=X dot] (31) at (2.75, 0) {};
+		\node [style=none] (32) at (1.75, 0) {};
+		\node [style=none] (33) at (8.25, 0) {};
+		\node [style=none] (34) at (5, -1.25) {};
+		\node [style=none] (35) at (3.5, 1.75) {};
+		\node [style=none] (36) at (3.5, -0.25) {};
+		\node [style=none] (37) at (6.5, -0.25) {};
+		\node [style=none] (38) at (6.5, 1.75) {};
+		\node [style=none] (40) at (-0.5, 0) {$=$};
+		\node [style=none] (42) at (1, 0) {$\oneovertwo \ \cdot$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [in=180, out=60] (11) to (12.center);
+		\draw [in=180, out=-60] (11) to (13.center);
+		\draw [in=0, out=120] (7) to (12.center);
+		\draw [in=0, out=-120] (7) to (13.center);
+		\draw [in=-180, out=75] (15) to (11);
+		\draw [in=0, out=105] (18) to (7);
+		\draw (19.center) to (15);
+		\draw (18) to (20.center);
+		\draw [in=180, out=-75] (15) to (21.center);
+		\draw [in=-105, out=0] (21.center) to (18);
+		\draw [style=box edge] (22.center) to (25.center);
+		\draw [style=box edge] (25.center) to (24.center);
+		\draw [style=box edge] (24.center) to (23.center);
+		\draw [style=box edge] (23.center) to (22.center);
+		\draw [in=-180, out=75] (31) to (28);
+		\draw [in=0, out=105] (26) to (27);
+		\draw (32.center) to (31);
+		\draw (26) to (33.center);
+		\draw [in=180, out=-75] (31) to (34.center);
+		\draw [in=-105, out=0] (34.center) to (26);
+		\draw [style=box edge] (35.center) to (38.center);
+		\draw [style=box edge] (38.center) to (37.center);
+		\draw [style=box edge] (37.center) to (36.center);
+		\draw [style=box edge] (36.center) to (35.center);
+	\end{pgfonlayer}
+\end{tikzpicture}%
+
+\end{center}
+\end{document}
