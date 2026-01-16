@@ -1,3 +1,27 @@
+# v1.3.0 - 16-01-2026
+40 new pages of text and numerous fixes and updated sections.
+The main highlights are a new section on CNOT mapping and routing for restricted architectures, a general update to the MBQC chapter to improve readability, and several new section in the last chapter on Fault-tolerant quantum computing including an end-to-end cost-analysis of Shor's algorithm.
+
+Breaking changes:
+* CNOT Circuit extraction is now done from the right instead of from the left, so that the Gaussian elimination involves row operations instead of column operations.
+* H-boxes are now labelled by a real number denoting the phase, instead of a general complex number. So whereas something might have been labelled by e^{i alpha}, it would now just be labelled by alpha.
+* Due to change in convention for rows and columns for stabilizer matrices, many matrix arrows now contain transposes where they did not before. This matches the notation better to that in the literature.
+
+New sections and material:
+* Several new exercises throughout the book.
+* Added Acknowledgements in Section 1.3.
+* Section 4.4 and advanced section 4.6.2 on CNOT routing and architecture aware mapping.
+* 10.2.4 on the Graphical Fourier transform of H-boxes.
+* More information on different noise models in chapter 12.
+* 12.3.2 on Transversal logical measurements in CSS codes.
+* New final section of the book 12.4 where we give a high-level end-to-end cost analysis of Shor's algorithm.
+
+Updated sections and material:
+* Improved the cheatsheet chapter 8.
+* General improvements to the readability of section 9.1 in MBQC and this chapter in general.
+* Section on catalysing completeness is moved to advanced material 11.6.5.
+* Updated section on magic state distillation to make it less finicky.
+
 # v1.2.0 - 06-08-2025
 53 new pages of text, mostly in expanded introductions, summaries and a new cheatsheet chapter.
 
