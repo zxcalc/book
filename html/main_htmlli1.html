@@ -7,8 +7,10 @@
 <link href='main_html.css' rel='stylesheet' type='text/css' /> 
 <meta content='main_html.tex' name='src' /> 
  <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+<link href='additional-css.css' rel='stylesheet' type='text/css' /> 
+<script defer='defer' src='proof_collapse.js' type='text/javascript'></script><script defer='defer' src='navigation_menu.js' type='text/javascript'></script> 
 </head><body>
-   <!-- l. 10 --><div class='crosslinks'><p class='noindent'>[<a href='main_htmlli2.html'>next</a>] [<a href='main_html.html'>prev</a>] [<a href='main_html.html#tailmain_html'>prev-tail</a>] [<a href='#tailmain_htmlli1.html'>tail</a>] [<a href='main_html.html#main_htmlli1.html'>up</a>] </p></div>
+   <!-- l. 28 --><div class='crosslinks'><p class='noindent'>  <a href='main_htmlli2.html'>Next Chapter</a>    <a href='main_html.html'>Previous Chapter</a>    <a href='main_html.html#main_htmlli1.html'>Contents</a>  </p></div>
    <h2 class='likechapterHead' id='contents'><a id='x2-1000'></a>Contents</h2>
    <div class='tableofcontents'>
    <span class='chapterToc'> <a href='#about-this-version'>About This Version</a></span>
@@ -18,264 +20,286 @@
 <br />   <span class='subsectionToc'>1.1.2 <a href='main_htmlch1.html#coming-from-picturing-quantum-processes' id='QQ2-4-7'>Coming from <span class='cmti-10x-x-109'>Picturing Quantum Processes</span></a></span>
 <br />   <span class='subsectionToc'>1.1.3 <a href='main_htmlch1.html#coming-from-another-quantum-computing-background' id='QQ2-4-8'>Coming from another quantum computing background</a></span>
 <br />   <span class='sectionToc'>1.2 <a href='main_htmlch1.html#overview'>Overview</a></span>
+<br />   <span class='sectionToc'>1.3 <a href='main_htmlch1.html#acknowledgements'>Acknowledgements</a></span>
 <br />   <span class='chapterToc'>2 <a href='main_htmlch2.html#the-quantum-circuit-model'>The Quantum Circuit Model</a></span>
 <br />   <span class='sectionToc'>2.1 <a href='main_htmlch2.html#preliminaries'>Preliminaries</a></span>
-<br />   <span class='subsectionToc'>2.1.1 <a href='main_htmlch2.html#some-things-you-should-know-about-complex-numbers' id='QQ2-5-12'>Some things you should know about complex numbers</a></span>
-<br />   <span class='subsectionToc'>2.1.2 <a href='main_htmlch2.html#hilbert-spaces' id='QQ2-5-13'>Hilbert spaces</a></span>
-<br />   <span class='subsectionToc'>2.1.3 <a href='main_htmlch2.html#types-of-linear-maps' id='QQ2-5-14'>Types of linear maps</a></span>
-<br />   <span class='subsectionToc'>2.1.4 <a href='main_htmlch2.html#tensors-and-the-tensor-product' id='QQ2-5-15'>Tensors and the tensor product</a></span>
-<br />   <span class='subsectionToc'>2.1.5 <a href='main_htmlch2.html#sums-and-diagrams' id='QQ2-5-16'>Sums and diagrams</a></span>
-<br />   <span class='subsectionToc'>2.1.6 <a href='main_htmlch2.html#tensor-networks-and-string-diagrams' id='QQ2-5-17'>Tensor networks and string diagrams</a></span>
-<br />   <span class='subsectionToc'>2.1.7 <a href='main_htmlch2.html#cups-and-caps' id='QQ2-5-18'>Cups and caps</a></span>
-<br />   <span class='sectionToc'>2.2 <a href='main_htmlch2.html#a-bluffers-intro-to-quantum-theory'>A bluffer’s intro to quantum theory</a></span>
-<br />   <span class='subsectionToc'>2.2.1 <a href='main_htmlch2.html#quantum-states' id='QQ2-5-20'>Quantum states</a></span>
-<br />   <span class='subsectionToc'>2.2.2 <a href='main_htmlch2.html#qubits-and-the-bloch-sphere' id='QQ2-5-21'>Qubits and the Bloch sphere</a></span>
-<br />   <span class='subsectionToc'>2.2.3 <a href='main_htmlch2.html#unitary-evolution' id='QQ2-5-22'>Unitary evolution</a></span>
-<br />   <span class='subsectionToc'>2.2.4 <a href='main_htmlch2.html#measurements-and-the-born-rule' id='QQ2-5-23'>Measurements and the Born rule</a></span>
-<br />   <span class='sectionToc'>2.3 <a href='main_htmlch2.html#gates-and-circuits'>Gates and circuits</a></span>
+<br />   <span class='subsectionToc'>2.1.1 <a href='main_htmlch2.html#some-things-you-should-know-about-complex-numbers' id='QQ2-5-14'>Some things you should know about complex numbers</a></span>
+<br />   <span class='subsectionToc'>2.1.2 <a href='main_htmlch2.html#hilbert-spaces' id='QQ2-5-15'>Hilbert spaces</a></span>
+<br />   <span class='subsectionToc'>2.1.3 <a href='main_htmlch2.html#types-of-linear-maps' id='QQ2-5-16'>Types of linear maps</a></span>
+<br />   <span class='subsectionToc'>2.1.4 <a href='main_htmlch2.html#tensors-and-the-tensor-product' id='QQ2-5-17'>Tensors and the tensor product</a></span>
+<br />   <span class='subsectionToc'>2.1.5 <a href='main_htmlch2.html#sums-and-diagrams' id='QQ2-5-18'>Sums and diagrams</a></span>
+<br />   <span class='subsectionToc'>2.1.6 <a href='main_htmlch2.html#tensor-networks-and-string-diagrams' id='QQ2-5-19'>Tensor networks and string diagrams</a></span>
+<br />   <span class='subsectionToc'>2.1.7 <a href='main_htmlch2.html#cups-and-caps' id='QQ2-5-20'>Cups and caps</a></span>
                                                                      
 
                                                                      
-<br />   <span class='subsectionToc'>2.3.1 <a href='main_htmlch2.html#classical-computation-with-quantum-gates' id='QQ2-5-25'>Classical computation with quantum gates</a></span>
-<br />   <span class='subsectionToc'>2.3.2 <a href='main_htmlch2.html#pauli-and-phase-gates' id='QQ2-5-26'>Pauli and phase gates</a></span>
-<br />   <span class='subsectionToc'>2.3.3 <a href='main_htmlch2.html#hadamard-gates' id='QQ2-5-27'>Hadamard gates</a></span>
-<br />   <span class='subsectionToc'>2.3.4 <a href='main_htmlch2.html#controlled-unitaries' id='QQ2-5-28'>Controlled unitaries</a></span>
-<br />   <span class='subsectionToc'>2.3.5 <a href='main_htmlch2.html#approximate-universality' id='QQ2-5-29'>(Approximate) universality</a></span>
-<br />   <span class='subsectionToc'>2.3.6 <a href='main_htmlch2.html#quantum-circuit-notation' id='QQ2-5-30'>Quantum circuit notation</a></span>
+<br />   <span class='sectionToc'>2.2 <a href='main_htmlch2.html#a-bluffers-intro-to-quantum-theory'>A bluffer’s intro to quantum theory</a></span>
+<br />   <span class='subsectionToc'>2.2.1 <a href='main_htmlch2.html#quantum-states' id='QQ2-5-22'>Quantum states</a></span>
+<br />   <span class='subsectionToc'>2.2.2 <a href='main_htmlch2.html#qubits-and-the-bloch-sphere' id='QQ2-5-23'>Qubits and the Bloch sphere</a></span>
+<br />   <span class='subsectionToc'>2.2.3 <a href='main_htmlch2.html#unitary-evolution' id='QQ2-5-24'>Unitary evolution</a></span>
+<br />   <span class='subsectionToc'>2.2.4 <a href='main_htmlch2.html#measurements-and-the-born-rule' id='QQ2-5-25'>Measurements and the Born rule</a></span>
+<br />   <span class='sectionToc'>2.3 <a href='main_htmlch2.html#gates-and-circuits'>Gates and circuits</a></span>
+<br />   <span class='subsectionToc'>2.3.1 <a href='main_htmlch2.html#classical-computation-with-quantum-gates' id='QQ2-5-27'>Classical computation with quantum gates</a></span>
+<br />   <span class='subsectionToc'>2.3.2 <a href='main_htmlch2.html#pauli-and-phase-gates' id='QQ2-5-28'>Pauli and phase gates</a></span>
+<br />   <span class='subsectionToc'>2.3.3 <a href='main_htmlch2.html#hadamard-gates' id='QQ2-5-29'>Hadamard gates</a></span>
+<br />   <span class='subsectionToc'>2.3.4 <a href='main_htmlch2.html#controlled-unitaries' id='QQ2-5-30'>Controlled unitaries</a></span>
+<br />   <span class='subsectionToc'>2.3.5 <a href='main_htmlch2.html#approximate-universality' id='QQ2-5-31'>(Approximate) universality</a></span>
+<br />   <span class='subsectionToc'>2.3.6 <a href='main_htmlch2.html#quantum-circuit-notation' id='QQ2-5-32'>Quantum circuit notation</a></span>
 <br />   <span class='sectionToc'>2.4 <a href='main_htmlch2.html#a-dash-of-quantum-algorithms'>A dash of quantum algorithms</a></span>
 <br />   <span class='sectionToc'>2.5 <a href='main_htmlch2.html#a-dash-of-complexity-theory'>A dash of complexity theory</a></span>
-<br />   <span class='subsectionToc'>2.5.1 <a href='main_htmlch2.html#asymptotic-growth' id='QQ2-5-33'>Asymptotic growth</a></span>
-<br />   <span class='subsectionToc'>2.5.2 <a href='main_htmlch2.html#classical-complexity-classes' id='QQ2-5-34'>Classical complexity classes</a></span>
-<br />   <span class='subsectionToc'>2.5.3 <a href='main_htmlch2.html#bqp' id='QQ2-5-35'>BQP</a></span>
+<br />   <span class='subsectionToc'>2.5.1 <a href='main_htmlch2.html#asymptotic-growth' id='QQ2-5-35'>Asymptotic growth</a></span>
+<br />   <span class='subsectionToc'>2.5.2 <a href='main_htmlch2.html#classical-complexity-classes' id='QQ2-5-36'>Classical complexity classes</a></span>
+<br />   <span class='subsectionToc'>2.5.3 <a href='main_htmlch2.html#bqp' id='QQ2-5-37'>BQP</a></span>
 <br />   <span class='sectionToc'>2.6 <a href='main_htmlch2.html#summary-what-to-remember'>Summary: What to remember</a></span>
 <br />   <span class='sectionToc'>2.7 <a href='main_htmlch2.html#advanced-material'>Advanced Material*</a></span>
-<br />   <span class='subsectionToc'>2.7.1 <a href='main_htmlch2.html#quantum-mixed-states-and-channels' id='QQ2-5-38'>Quantum mixed states and channels*</a></span>
+<br />   <span class='subsectionToc'>2.7.1 <a href='main_htmlch2.html#quantum-mixed-states-and-channels' id='QQ2-5-40'>Quantum mixed states and channels*</a></span>
 <br />   <span class='sectionToc'>2.8 <a href='main_htmlch2.html#references-and-further-reading'>References and further reading</a></span>
 <br />   <span class='chapterToc'>3 <a href='main_htmlch3.html#the-zxcalculus'>The ZX-Calculus</a></span>
 <br />   <span class='sectionToc'>3.1 <a href='main_htmlch3.html#zxdiagrams'>ZX-diagrams</a></span>
-<br />   <span class='subsectionToc'>3.1.1 <a href='main_htmlch3.html#spiders' id='QQ2-6-50'>Spiders</a></span>
-<br />   <span class='subsectionToc'>3.1.2 <a href='main_htmlch3.html#defining-zxdiagrams' id='QQ2-6-51'>Defining ZX-diagrams</a></span>
-<br />   <span class='subsectionToc'>3.1.3 <a href='main_htmlch3.html#symmetries' id='QQ2-6-54'>Symmetries</a></span>
-<br />   <span class='subsectionToc'>3.1.4 <a href='main_htmlch3.html#scalars' id='QQ2-6-55'>Scalars</a></span>
-<br />   <span class='subsectionToc'>3.1.5 <a href='main_htmlch3.html#adjoints-transpose-and-conjugate' id='QQ2-6-56'>Adjoints, transpose and conjugate</a></span>
-<br />   <span class='subsectionToc'>3.1.6 <a href='main_htmlch3.html#hadamards' id='QQ2-6-57'>Hadamards</a></span>
-<br />   <span class='subsectionToc'>3.1.7 <a href='main_htmlch3.html#universality' id='QQ2-6-58'>Universality</a></span>
+<br />   <span class='subsectionToc'>3.1.1 <a href='main_htmlch3.html#spiders' id='QQ2-6-53'>Spiders</a></span>
+<br />   <span class='subsectionToc'>3.1.2 <a href='main_htmlch3.html#defining-zxdiagrams' id='QQ2-6-54'>Defining ZX-diagrams</a></span>
+<br />   <span class='subsectionToc'>3.1.3 <a href='main_htmlch3.html#symmetries' id='QQ2-6-57'>Symmetries</a></span>
+<br />   <span class='subsectionToc'>3.1.4 <a href='main_htmlch3.html#scalars' id='QQ2-6-58'>Scalars</a></span>
+<br />   <span class='subsectionToc'>3.1.5 <a href='main_htmlch3.html#adjoints-transpose-and-conjugate' id='QQ2-6-59'>Adjoints, transpose and conjugate</a></span>
+<br />   <span class='subsectionToc'>3.1.6 <a href='main_htmlch3.html#hadamards' id='QQ2-6-60'>Hadamards</a></span>
+<br />   <span class='subsectionToc'>3.1.7 <a href='main_htmlch3.html#universality' id='QQ2-6-61'>Universality</a></span>
 <br />   <span class='sectionToc'>3.2 <a href='main_htmlch3.html#the-rules-of-the-zxcalculus'>The rules of the ZX-calculus</a></span>
-<br />   <span class='subsectionToc'>3.2.1 <a href='main_htmlch3.html#spider-fusion-and-identity-removal' id='QQ2-6-61'>Spider fusion and identity removal</a></span>
-<br />   <span class='subsectionToc'>3.2.2              <a href='main_htmlch3.html#the-copy-rule-and-commutation' id='QQ2-6-62'>The              copy              rule              and
-<!-- l. 63 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>π</mi></math>-commutation</a></span>
-<br />   <span class='subsectionToc'>3.2.3 <a href='main_htmlch3.html#colour-changing' id='QQ2-6-63'>Colour changing</a></span>
-<br />   <span class='subsectionToc'>3.2.4 <a href='main_htmlch3.html#strong-complementarity' id='QQ2-6-64'>Strong complementarity</a></span>
-<br />   <span class='subsectionToc'>3.2.5 <a href='main_htmlch3.html#euler-decomposition' id='QQ2-6-69'>Euler decomposition</a></span>
+<br />   <span class='subsectionToc'>3.2.1 <a href='main_htmlch3.html#spider-fusion-and-identity-removal' id='QQ2-6-64'>Spider fusion and identity removal</a></span>
+<br />   <span class='subsectionToc'>3.2.2              <a href='main_htmlch3.html#the-copy-rule-and-commutation' id='QQ2-6-65'>The              copy              rule              and
+<!-- l. 66 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mi>π</mi></math>-commutation</a></span>
+<br />   <span class='subsectionToc'>3.2.3 <a href='main_htmlch3.html#colour-changing' id='QQ2-6-66'>Colour changing</a></span>
+<br />   <span class='subsectionToc'>3.2.4 <a href='main_htmlch3.html#strong-complementarity' id='QQ2-6-67'>Strong complementarity</a></span>
+<br />   <span class='subsectionToc'>3.2.5 <a href='main_htmlch3.html#euler-decomposition' id='QQ2-6-72'>Euler decomposition</a></span>
 <br />   <span class='sectionToc'>3.3 <a href='main_htmlch3.html#zx-in-action'>ZX in action</a></span>
-<br />   <span class='subsectionToc'>3.3.1 <a href='main_htmlch3.html#magic-state-injection' id='QQ2-6-71'>Magic state injection</a></span>
-<br />   <span class='subsectionToc'>3.3.2 <a href='main_htmlch3.html#teleportation' id='QQ2-6-72'>Teleportation</a></span>
-<br />   <span class='subsectionToc'>3.3.3 <a href='main_htmlch3.html#detecting-entanglement' id='QQ2-6-73'>Detecting entanglement</a></span>
-<br />   <span class='subsectionToc'>3.3.4 <a href='main_htmlch3.html#the-bernsteinvazirani-algorithm' id='QQ2-6-74'>The Bernstein-Vazirani algorithm</a></span>
+<br />   <span class='subsectionToc'>3.3.1 <a href='main_htmlch3.html#magic-state-injection' id='QQ2-6-74'>Magic state injection</a></span>
+<br />   <span class='subsectionToc'>3.3.2 <a href='main_htmlch3.html#teleportation' id='QQ2-6-75'>Teleportation</a></span>
+<br />   <span class='subsectionToc'>3.3.3 <a href='main_htmlch3.html#detecting-entanglement' id='QQ2-6-76'>Detecting entanglement</a></span>
+<br />   <span class='subsectionToc'>3.3.4 <a href='main_htmlch3.html#the-bernsteinvazirani-algorithm' id='QQ2-6-77'>The Bernstein-Vazirani algorithm</a></span>
 <br />   <span class='sectionToc'>3.4 <a href='main_htmlch3.html#extracting-circuits-from-zxdiagrams'>Extracting circuits from ZX-diagrams</a></span>
-<br />   <span class='subsectionToc'>3.4.1 <a href='main_htmlch3.html#zxdiagrams-to-circuits-with-postselection' id='QQ2-6-76'>ZX-diagrams to circuits with post-selection</a></span>
-<br />   <span class='subsectionToc'>3.4.2 <a href='main_htmlch3.html#circuitlike-diagrams-and-optimisation' id='QQ2-6-77'>Circuit-like diagrams and optimisation</a></span>
-<br />   <span class='sectionToc'>3.5 <a href='main_htmlch3.html#summary-what-to-remember1'>Summary: What to remember</a></span>
-<br />   <span class='sectionToc'>3.6 <a href='main_htmlch3.html#advanced-material1'>Advanced Material*</a></span>
-<br />   <span class='subsectionToc'>3.6.1 <a href='main_htmlch3.html#formal-rewriting-and-soundness' id='QQ2-6-80'>Formal rewriting and soundness*</a></span>
-<br />   <span class='subsectionToc'>3.6.2 <a href='main_htmlch3.html#dealing-with-scalars' id='QQ2-6-81'>Dealing with scalars*</a></span>
-<br />   <span class='sectionToc'>3.7 <a href='main_htmlch3.html#references-and-further-reading1'>References and further reading</a></span>
+<br />   <span class='subsectionToc'>3.4.1 <a href='main_htmlch3.html#zxdiagrams-to-circuits-with-postselection' id='QQ2-6-79'>ZX-diagrams to circuits with post-selection</a></span>
                                                                      
 
                                                                      
+<br />   <span class='subsectionToc'>3.4.2 <a href='main_htmlch3.html#circuitlike-diagrams-and-optimisation' id='QQ2-6-80'>Circuit-like diagrams and optimisation</a></span>
+<br />   <span class='sectionToc'>3.5 <a href='main_htmlch3.html#summary-what-to-remember1'>Summary: What to remember</a></span>
+<br />   <span class='sectionToc'>3.6 <a href='main_htmlch3.html#advanced-material1'>Advanced Material*</a></span>
+<br />   <span class='subsectionToc'>3.6.1 <a href='main_htmlch3.html#formal-rewriting-and-soundness' id='QQ2-6-83'>Formal rewriting and soundness*</a></span>
+<br />   <span class='subsectionToc'>3.6.2 <a href='main_htmlch3.html#dealing-with-scalars' id='QQ2-6-84'>Dealing with scalars*</a></span>
+<br />   <span class='sectionToc'>3.7 <a href='main_htmlch3.html#references-and-further-reading1'>References and further reading</a></span>
 <br />   <span class='chapterToc'>4 <a href='main_htmlch4.html#cnot-circuits-and-phasefree-zxdiagrams'>CNOT circuits and phase-free ZX-diagrams</a></span>
 <br />   <span class='sectionToc'>4.1 <a href='main_htmlch4.html#cnot-circuits-and-parity-matrices'>CNOT circuits and parity matrices</a></span>
-<br />   <span class='subsectionToc'>4.1.1 <a href='main_htmlch4.html#the-twoelement-field-and-the-parity-of-a-bit-string' id='QQ2-7-92'>The two-element field and the parity of a bit string</a></span>
-<br />   <span class='subsectionToc'>4.1.2 <a href='main_htmlch4.html#from-cnot-circuits-to-parity-maps' id='QQ2-7-93'>From CNOT circuits to parity maps</a></span>
-<br />   <span class='subsectionToc'>4.1.3 <a href='main_htmlch4.html#cnot-circuit-synthesis' id='QQ2-7-94'>CNOT circuit synthesis</a></span>
+<br />   <span class='subsectionToc'>4.1.1 <a href='main_htmlch4.html#the-twoelement-field-and-the-parity-of-a-bit-string' id='QQ2-7-95'>The two-element field and the parity of a bit string</a></span>
+<br />   <span class='subsectionToc'>4.1.2 <a href='main_htmlch4.html#from-cnot-circuits-to-parity-maps' id='QQ2-7-96'>From CNOT circuits to parity maps</a></span>
+<br />   <span class='subsectionToc'>4.1.3 <a href='main_htmlch4.html#cnot-circuit-synthesis' id='QQ2-7-97'>CNOT circuit synthesis</a></span>
 <br />   <span class='sectionToc'>4.2 <a href='main_htmlch4.html#the-phasefree-zx-calculus'>The phase-free ZX calculus</a></span>
-<br />   <span class='subsectionToc'>4.2.1 <a href='main_htmlch4.html#reducing-a-zxdiagram-to-normal-form' id='QQ2-7-97'>Reducing a ZX-diagram to normal form</a></span>
-<br />   <span class='subsectionToc'>4.2.2 <a href='main_htmlch4.html#graphical-cnot-circuit-extraction' id='QQ2-7-98'>Graphical CNOT circuit extraction</a></span>
+<br />   <span class='subsectionToc'>4.2.1 <a href='main_htmlch4.html#reducing-a-zxdiagram-to-normal-form' id='QQ2-7-100'>Reducing a ZX-diagram to normal form</a></span>
+<br />   <span class='subsectionToc'>4.2.2 <a href='main_htmlch4.html#graphical-cnot-circuit-extraction' id='QQ2-7-101'>Graphical CNOT circuit extraction</a></span>
 <br />   <span class='sectionToc'>4.3                  <a href='main_htmlch4.html#phasefree-states-and-f-linear-subspaces'>Phase-free                  states                  and
-<!-- l. 102 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>𝔽</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
+<!-- l. 105 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><msub><mrow><mi>𝔽</mi></mrow><mrow><mn>2</mn></mrow></msub></math>
 linear subspaces</a></span>
-<br />   <span class='subsectionToc'>4.3.1 <a href='main_htmlch4.html#phasefree-completeness' id='QQ2-7-100'>Phase-free completeness</a></span>
-<br />   <span class='subsectionToc'>4.3.2 <a href='main_htmlch4.html#xz-normal-forms-and-orthogonal-subspaces' id='QQ2-7-101'>X-Z normal forms and orthogonal subspaces</a></span>
-<br />   <span class='subsectionToc'>4.3.3 <a href='main_htmlch4.html#relating-parity-matrices-and-subspaces' id='QQ2-7-102'>Relating parity matrices and subspaces</a></span>
-<br />   <span class='sectionToc'>4.4 <a href='main_htmlch4.html#summary-what-to-remember2'>Summary: What to remember</a></span>
-<br />   <span class='sectionToc'>4.5 <a href='main_htmlch4.html#advanced-material2'>Advanced Material*</a></span>
-<br />   <span class='subsectionToc'>4.5.1 <a href='main_htmlch4.html#better-cnot-circuit-extraction' id='QQ2-7-105'>Better CNOT circuit extraction*</a></span>
-<br />   <span class='sectionToc'>4.6 <a href='main_htmlch4.html#references-and-further-reading2'>References and further reading</a></span>
+<br />   <span class='subsectionToc'>4.3.1 <a href='main_htmlch4.html#phasefree-completeness' id='QQ2-7-103'>Phase-free completeness</a></span>
+<br />   <span class='subsectionToc'>4.3.2 <a href='main_htmlch4.html#xz-normal-forms-and-orthogonal-subspaces' id='QQ2-7-104'>X-Z normal forms and orthogonal subspaces</a></span>
+<br />   <span class='subsectionToc'>4.3.3 <a href='main_htmlch4.html#relating-parity-matrices-and-subspaces' id='QQ2-7-105'>Relating parity matrices and subspaces</a></span>
+<br />   <span class='sectionToc'>4.4 <a href='main_htmlch4.html#cnot-circuit-synthesis-with-connectivity-constraints'>CNOT circuit synthesis with connectivity constraints</a></span>
+<br />   <span class='sectionToc'>4.5 <a href='main_htmlch4.html#summary-what-to-remember2'>Summary: What to remember</a></span>
+<br />   <span class='sectionToc'>4.6 <a href='main_htmlch4.html#advanced-material2'>Advanced Material*</a></span>
+<br />   <span class='subsectionToc'>4.6.1 <a href='main_htmlch4.html#better-cnot-circuit-extraction' id='QQ2-7-109'>Better CNOT circuit extraction*</a></span>
+<br />   <span class='subsectionToc'>4.6.2 <a href='main_htmlch4.html#architectureaware-cnot-synthesis-using-steiner-trees' id='QQ2-7-110'>Architecture-aware CNOT synthesis using Steiner trees*</a></span>
+<br />   <span class='sectionToc'>4.7 <a href='main_htmlch4.html#references-and-further-reading2'>References and further reading</a></span>
 <br />   <span class='chapterToc'>5 <a href='main_htmlch5.html#clifford-circuits-and-diagrams'>Clifford circuits and diagrams</a></span>
 <br />   <span class='sectionToc'>5.1 <a href='main_htmlch5.html#clifford-circuits-and-clifford-zxdiagrams'>Clifford circuits and Clifford ZX-diagrams</a></span>
-<br />   <span class='subsectionToc'>5.1.1 <a href='main_htmlch5.html#graphlike-diagrams' id='QQ2-8-113'>Graph-like diagrams</a></span>
-<br />   <span class='subsectionToc'>5.1.2 <a href='main_htmlch5.html#graph-states' id='QQ2-8-114'>Graph states</a></span>
+<br />   <span class='subsectionToc'>5.1.1 <a href='main_htmlch5.html#graphlike-diagrams' id='QQ2-8-118'>Graph-like diagrams</a></span>
+<br />   <span class='subsectionToc'>5.1.2 <a href='main_htmlch5.html#graph-states' id='QQ2-8-119'>Graph states</a></span>
 <br />   <span class='sectionToc'>5.2 <a href='main_htmlch5.html#simplifying-clifford-diagrams'>Simplifying Clifford diagrams</a></span>
-<br />   <span class='subsectionToc'>5.2.1 <a href='main_htmlch5.html#transforming-graph-states-using-local-complementation' id='QQ2-8-116'>Transforming graph states using local complementation</a></span>
-<br />   <span class='subsectionToc'>5.2.2 <a href='main_htmlch5.html#pivoting' id='QQ2-8-117'>Pivoting</a></span>
-<br />   <span class='subsectionToc'>5.2.3 <a href='main_htmlch5.html#removing-spiders-in-clifford-diagrams' id='QQ2-8-118'>Removing spiders in Clifford diagrams</a></span>
+<br />   <span class='subsectionToc'>5.2.1 <a href='main_htmlch5.html#transforming-graph-states-using-local-complementation' id='QQ2-8-121'>Transforming graph states using local complementation</a></span>
+<br />   <span class='subsectionToc'>5.2.2 <a href='main_htmlch5.html#pivoting' id='QQ2-8-122'>Pivoting</a></span>
+<br />   <span class='subsectionToc'>5.2.3 <a href='main_htmlch5.html#removing-spiders-in-clifford-diagrams' id='QQ2-8-123'>Removing spiders in Clifford diagrams</a></span>
 <br />   <span class='sectionToc'>5.3 <a href='main_htmlch5.html#clifford-normal-forms'>Clifford normal forms</a></span>
-<br />   <span class='subsectionToc'>5.3.1 <a href='main_htmlch5.html#the-affine-with-phases-normal-form' id='QQ2-8-120'>The affine with phases normal form</a></span>
-<br />   <span class='subsectionToc'>5.3.2 <a href='main_htmlch5.html#gslc-normal-form' id='QQ2-8-121'>GSLC normal form</a></span>
-<br />   <span class='subsectionToc'>5.3.3 <a href='main_htmlch5.html#normal-form-for-clifford-circuits' id='QQ2-8-122'>Normal form for Clifford circuits</a></span>
+<br />   <span class='subsectionToc'>5.3.1 <a href='main_htmlch5.html#the-affine-with-phases-normal-form' id='QQ2-8-125'>The affine with phases normal form</a></span>
+<br />   <span class='subsectionToc'>5.3.2 <a href='main_htmlch5.html#gslc-normal-form' id='QQ2-8-126'>GSLC normal form</a></span>
+<br />   <span class='subsectionToc'>5.3.3 <a href='main_htmlch5.html#normal-form-for-clifford-circuits' id='QQ2-8-127'>Normal form for Clifford circuits</a></span>
 <br />   <span class='sectionToc'>5.4 <a href='main_htmlch5.html#classical-simulation-of-clifford-circuits'>Classical simulation of Clifford circuits</a></span>
-<br />   <span class='subsectionToc'>5.4.1 <a href='main_htmlch5.html#simulating-cliffords-efficiently' id='QQ2-8-124'>Simulating Cliffords efficiently</a></span>
-<br />   <span class='subsectionToc'>5.4.2 <a href='main_htmlch5.html#weak-vs-strong-simulation' id='QQ2-8-125'>Weak vs strong simulation</a></span>
+<br />   <span class='subsectionToc'>5.4.1 <a href='main_htmlch5.html#simulating-cliffords-efficiently' id='QQ2-8-129'>Simulating Cliffords efficiently</a></span>
+<br />   <span class='subsectionToc'>5.4.2 <a href='main_htmlch5.html#weak-vs-strong-simulation' id='QQ2-8-130'>Weak vs strong simulation</a></span>
 <br />   <span class='sectionToc'>5.5 <a href='main_htmlch5.html#completeness-of-clifford-zxdiagrams'>Completeness of Clifford ZX-diagrams</a></span>
-<br />   <span class='subsectionToc'>5.5.1 <a href='main_htmlch5.html#a-normal-form-for-scalars' id='QQ2-8-127'>A normal form for scalars</a></span>
-<br />   <span class='subsectionToc'>5.5.2 <a href='main_htmlch5.html#a-unique-normal-form-for-clifford-diagrams' id='QQ2-8-128'>A unique normal form for Clifford diagrams</a></span>
+<br />   <span class='subsectionToc'>5.5.1 <a href='main_htmlch5.html#a-normal-form-for-scalars' id='QQ2-8-132'>A normal form for scalars</a></span>
+<br />   <span class='subsectionToc'>5.5.2 <a href='main_htmlch5.html#a-unique-normal-form-for-clifford-diagrams' id='QQ2-8-133'>A unique normal form for Clifford diagrams</a></span>
+                                                                     
+
+                                                                     
 <br />   <span class='sectionToc'>5.6 <a href='main_htmlch5.html#summary-what-to-remember3'>Summary: What to remember</a></span>
 <br />   <span class='sectionToc'>5.7 <a href='main_htmlch5.html#references-and-further-reading3'>References and further reading</a></span>
 <br />   <span class='chapterToc'>6 <a href='main_htmlch6.html#stabiliser-theory'>Stabiliser theory</a></span>
 <br />   <span class='sectionToc'>6.1 <a href='main_htmlch6.html#paulis-and-stabilisers'>Paulis and stabilisers</a></span>
-<br />   <span class='subsectionToc'>6.1.1 <a href='main_htmlch6.html#clifford-conjugation-aka-pushin-paulis' id='QQ2-9-138'>Clifford conjugation, a.k.a. pushin’ Paulis</a></span>
-<br />   <span class='subsectionToc'>6.1.2 <a href='main_htmlch6.html#stabiliser-subspaces' id='QQ2-9-139'>Stabiliser subspaces</a></span>
+<br />   <span class='subsectionToc'>6.1.1 <a href='main_htmlch6.html#clifford-conjugation-aka-pushin-paulis' id='QQ2-9-143'>Clifford conjugation, a.k.a. pushin’ Paulis</a></span>
+<br />   <span class='subsectionToc'>6.1.2 <a href='main_htmlch6.html#stabiliser-subspaces' id='QQ2-9-144'>Stabiliser subspaces</a></span>
 <br />   <span class='sectionToc'>6.2 <a href='main_htmlch6.html#stabiliser-measurements'>Stabiliser measurements</a></span>
-<br />   <span class='subsectionToc'>6.2.1 <a href='main_htmlch6.html#the-fundamental-theorem-of-stabiliser-theory' id='QQ2-9-141'>The Fundamental Theorem of Stabiliser Theory</a></span>
-                                                                     
-
-                                                                     
+<br />   <span class='subsectionToc'>6.2.1 <a href='main_htmlch6.html#the-fundamental-theorem-of-stabiliser-theory' id='QQ2-9-146'>The Fundamental Theorem of Stabiliser Theory</a></span>
 <br />   <span class='sectionToc'>6.3 <a href='main_htmlch6.html#stabiliser-states-and-the-clifford-group'>Stabiliser states and the Clifford group</a></span>
-<br />   <span class='subsectionToc'>6.3.1 <a href='main_htmlch6.html#maximal-stabiliser-groups' id='QQ2-9-143'>Maximal stabiliser groups</a></span>
-<br />   <span class='subsectionToc'>6.3.2 <a href='main_htmlch6.html#stabiliser-states' id='QQ2-9-144'>Stabiliser states</a></span>
-<br />   <span class='subsectionToc'>6.3.3 <a href='main_htmlch6.html#the-clifford-group' id='QQ2-9-145'>The Clifford group</a></span>
-<br />   <span class='subsectionToc'>6.3.4 <a href='main_htmlch6.html#putting-it-all-together' id='QQ2-9-146'>Putting it all together</a></span>
+<br />   <span class='subsectionToc'>6.3.1 <a href='main_htmlch6.html#maximal-stabiliser-groups' id='QQ2-9-148'>Maximal stabiliser groups</a></span>
+<br />   <span class='subsectionToc'>6.3.2 <a href='main_htmlch6.html#stabiliser-states' id='QQ2-9-149'>Stabiliser states</a></span>
+<br />   <span class='subsectionToc'>6.3.3 <a href='main_htmlch6.html#the-clifford-group' id='QQ2-9-150'>The Clifford group</a></span>
+<br />   <span class='subsectionToc'>6.3.4 <a href='main_htmlch6.html#putting-it-all-together' id='QQ2-9-151'>Putting it all together</a></span>
 <br />   <span class='sectionToc'>6.4 <a href='main_htmlch6.html#stabiliser-tableaux'>Stabiliser tableaux</a></span>
-<br />   <span class='subsectionToc'>6.4.1 <a href='main_htmlch6.html#cliffords-are-determined-by-pauli-conjugations' id='QQ2-9-148'>Cliffords are determined by Pauli conjugations</a></span>
-<br />   <span class='subsectionToc'>6.4.2 <a href='main_htmlch6.html#stabiliser-tableaux1' id='QQ2-9-149'>Stabiliser tableaux</a></span>
-<br />   <span class='subsectionToc'>6.4.3 <a href='main_htmlch6.html#paulis-as-bit-strings' id='QQ2-9-150'>Paulis as bit strings</a></span>
-<br />   <span class='subsectionToc'>6.4.4 <a href='main_htmlch6.html#cliffords-as-symplectic-matrices' id='QQ2-9-151'>Cliffords as symplectic matrices</a></span>
-<br />   <span class='subsectionToc'>6.4.5 <a href='main_htmlch6.html#adding-back-in-the-phases' id='QQ2-9-152'>Adding back in the phases</a></span>
-<br />   <span class='subsectionToc'>6.4.6 <a href='main_htmlch6.html#putting-it-all-together1' id='QQ2-9-153'>Putting it all together</a></span>
+<br />   <span class='subsectionToc'>6.4.1 <a href='main_htmlch6.html#cliffords-are-determined-by-pauli-conjugations' id='QQ2-9-153'>Cliffords are determined by Pauli conjugations</a></span>
+<br />   <span class='subsectionToc'>6.4.2 <a href='main_htmlch6.html#stabiliser-tableaux1' id='QQ2-9-154'>Stabiliser tableaux</a></span>
+<br />   <span class='subsectionToc'>6.4.3 <a href='main_htmlch6.html#paulis-as-bit-strings' id='QQ2-9-155'>Paulis as bit strings</a></span>
+<br />   <span class='subsectionToc'>6.4.4 <a href='main_htmlch6.html#cliffords-as-symplectic-matrices' id='QQ2-9-156'>Cliffords as symplectic matrices</a></span>
+<br />   <span class='subsectionToc'>6.4.5 <a href='main_htmlch6.html#adding-back-in-the-phases' id='QQ2-9-157'>Adding back in the phases</a></span>
+<br />   <span class='subsectionToc'>6.4.6 <a href='main_htmlch6.html#putting-it-all-together1' id='QQ2-9-158'>Putting it all together</a></span>
 <br />   <span class='sectionToc'>6.5 <a href='main_htmlch6.html#the-clifford-hierarchy'>The Clifford hierarchy</a></span>
 <br />   <span class='sectionToc'>6.6 <a href='main_htmlch6.html#summary-what-to-remember4'>Summary: What to remember</a></span>
 <br />   <span class='sectionToc'>6.7 <a href='main_htmlch6.html#references-and-further-reading4'>References and further reading</a></span>
 <br />   <span class='chapterToc'>7 <a href='main_htmlch7.html#universal-circuits'>Universal circuits</a></span>
 <br />   <span class='sectionToc'>7.1 <a href='main_htmlch7.html#phase-polynomials-and-path-sums'>Phase polynomials and path sums</a></span>
-<br />   <span class='subsectionToc'>7.1.1 <a href='main_htmlch7.html#phase-polynomials' id='QQ2-10-161'>Phase polynomials</a></span>
-<br />   <span class='subsectionToc'>7.1.2 <a href='main_htmlch7.html#phase-gadgets' id='QQ2-10-162'>Phase gadgets</a></span>
-<br />   <span class='subsectionToc'>7.1.3 <a href='main_htmlch7.html#synthesis-from-phase-polynomials' id='QQ2-10-163'>Synthesis from phase polynomials</a></span>
-<br />   <span class='subsectionToc'>7.1.4 <a href='main_htmlch7.html#universal-circuits-with-path-sums' id='QQ2-10-164'>Universal circuits with path sums</a></span>
-<br />   <span class='subsectionToc'>7.1.5 <a href='main_htmlch7.html#quantum-fourier-transform' id='QQ2-10-165'>Quantum Fourier transform</a></span>
+<br />   <span class='subsectionToc'>7.1.1 <a href='main_htmlch7.html#phase-polynomials' id='QQ2-10-166'>Phase polynomials</a></span>
+<br />   <span class='subsectionToc'>7.1.2 <a href='main_htmlch7.html#phase-gadgets' id='QQ2-10-167'>Phase gadgets</a></span>
+<br />   <span class='subsectionToc'>7.1.3 <a href='main_htmlch7.html#synthesis-from-phase-polynomials' id='QQ2-10-168'>Synthesis from phase polynomials</a></span>
+<br />   <span class='subsectionToc'>7.1.4 <a href='main_htmlch7.html#universal-circuits-with-path-sums' id='QQ2-10-169'>Universal circuits with path sums</a></span>
+<br />   <span class='subsectionToc'>7.1.5 <a href='main_htmlch7.html#quantum-fourier-transform' id='QQ2-10-170'>Quantum Fourier transform</a></span>
 <br />   <span class='sectionToc'>7.2 <a href='main_htmlch7.html#scalable-zx-notation'>Scalable ZX notation</a></span>
-<br />   <span class='subsectionToc'>7.2.1 <a href='main_htmlch7.html#dividers-and-gatherers' id='QQ2-10-167'>Dividers and gatherers</a></span>
-<br />   <span class='subsectionToc'>7.2.2 <a href='main_htmlch7.html#scalable-phase-gadgets' id='QQ2-10-168'>Scalable phase gadgets</a></span>
+<br />   <span class='subsectionToc'>7.2.1 <a href='main_htmlch7.html#dividers-and-gatherers' id='QQ2-10-172'>Dividers and gatherers</a></span>
+<br />   <span class='subsectionToc'>7.2.2 <a href='main_htmlch7.html#scalable-phase-gadgets' id='QQ2-10-173'>Scalable phase gadgets</a></span>
 <br />   <span class='sectionToc'>7.3 <a href='main_htmlch7.html#pauli-exponentials'>Pauli exponentials</a></span>
-<br />   <span class='subsectionToc'>7.3.1 <a href='main_htmlch7.html#unitaries-from-pauli-boxes' id='QQ2-10-170'>Unitaries from Pauli boxes</a></span>
-<br />   <span class='subsectionToc'>7.3.2 <a href='main_htmlch7.html#matrix-exponentials' id='QQ2-10-171'>Matrix exponentials</a></span>
-<br />   <span class='subsectionToc'>7.3.3 <a href='main_htmlch7.html#building-unitaries-as-exponentials' id='QQ2-10-172'>Building unitaries as exponentials</a></span>
-<br />   <span class='subsectionToc'>7.3.4 <a href='main_htmlch7.html#pauli-exponentials1' id='QQ2-10-173'>Pauli exponentials</a></span>
+<br />   <span class='subsectionToc'>7.3.1 <a href='main_htmlch7.html#unitaries-from-pauli-boxes' id='QQ2-10-175'>Unitaries from Pauli boxes</a></span>
+<br />   <span class='subsectionToc'>7.3.2 <a href='main_htmlch7.html#matrix-exponentials' id='QQ2-10-176'>Matrix exponentials</a></span>
+<br />   <span class='subsectionToc'>7.3.3 <a href='main_htmlch7.html#building-unitaries-as-exponentials' id='QQ2-10-177'>Building unitaries as exponentials</a></span>
+<br />   <span class='subsectionToc'>7.3.4 <a href='main_htmlch7.html#pauli-exponentials1' id='QQ2-10-178'>Pauli exponentials</a></span>
 <br />   <span class='sectionToc'>7.4 <a href='main_htmlch7.html#pauli-exponential-compilation'>Pauli exponential compilation</a></span>
-<br />   <span class='subsectionToc'>7.4.1 <a href='main_htmlch7.html#pauli-exponentials-are-a-universal-gate-set' id='QQ2-10-175'>Pauli exponentials are a universal gate set</a></span>
-<br />   <span class='subsectionToc'>7.4.2 <a href='main_htmlch7.html#compiling-to-pauli-exponentials' id='QQ2-10-176'>Compiling to Pauli exponentials</a></span>
-<br />   <span class='subsectionToc'>7.4.3 <a href='main_htmlch7.html#phase-folding' id='QQ2-10-177'>Phase folding</a></span>
+<br />   <span class='subsectionToc'>7.4.1 <a href='main_htmlch7.html#pauli-exponentials-are-a-universal-gate-set' id='QQ2-10-180'>Pauli exponentials are a universal gate set</a></span>
+<br />   <span class='subsectionToc'>7.4.2 <a href='main_htmlch7.html#compiling-to-pauli-exponentials' id='QQ2-10-181'>Compiling to Pauli exponentials</a></span>
+<br />   <span class='subsectionToc'>7.4.3 <a href='main_htmlch7.html#phase-folding' id='QQ2-10-182'>Phase folding</a></span>
 <br />   <span class='sectionToc'>7.5 <a href='main_htmlch7.html#hamiltonian-simulation'>Hamiltonian simulation</a></span>
 <br />   <span class='sectionToc'>7.6 <a href='main_htmlch7.html#simplifying-universal-diagrams'>Simplifying universal diagrams</a></span>
-<br />   <span class='subsectionToc'>7.6.1 <a href='main_htmlch7.html#removing-nonclifford-spiders' id='QQ2-10-180'>Removing non-Clifford spiders</a></span>
-<br />   <span class='subsectionToc'>7.6.2 <a href='main_htmlch7.html#circuits-from-universal-diagrams' id='QQ2-10-181'>Circuits from universal diagrams</a></span>
-<br />   <span class='sectionToc'>7.7 <a href='main_htmlch7.html#summary-what-to-remember5'>Summary: What to remember</a></span>
-<br />   <span class='sectionToc'>7.8 <a href='main_htmlch7.html#advanced-material3'>Advanced material*</a></span>
-<br />   <span class='subsectionToc'>7.8.1 <a href='main_htmlch7.html#simulating-universal-circuits' id='QQ2-10-184'>Simulating universal circuits*</a></span>
-<br />   <span class='subsectionToc'>7.8.2 <a href='main_htmlch7.html#higherorder-trotterisation' id='QQ2-10-187'>Higher-order Trotterisation*</a></span>
-<br />   <span class='subsectionToc'>7.8.3 <a href='main_htmlch7.html#randomised-compiling' id='QQ2-10-188'>Randomised compiling*</a></span>
-<br />   <span class='sectionToc'>7.9 <a href='main_htmlch7.html#references-and-further-reading5'>References and further reading</a></span>
                                                                      
 
                                                                      
+<br />   <span class='subsectionToc'>7.6.1 <a href='main_htmlch7.html#removing-nonclifford-spiders' id='QQ2-10-185'>Removing non-Clifford spiders</a></span>
+<br />   <span class='subsectionToc'>7.6.2 <a href='main_htmlch7.html#circuits-from-universal-diagrams' id='QQ2-10-186'>Circuits from universal diagrams</a></span>
+<br />   <span class='sectionToc'>7.7 <a href='main_htmlch7.html#summary-what-to-remember5'>Summary: What to remember</a></span>
+<br />   <span class='sectionToc'>7.8 <a href='main_htmlch7.html#advanced-material3'>Advanced material*</a></span>
+<br />   <span class='subsectionToc'>7.8.1 <a href='main_htmlch7.html#simulating-universal-circuits' id='QQ2-10-189'>Simulating universal circuits*</a></span>
+<br />   <span class='subsectionToc'>7.8.2 <a href='main_htmlch7.html#higherorder-trotterisation' id='QQ2-10-192'>Higher-order Trotterisation*</a></span>
+<br />   <span class='subsectionToc'>7.8.3 <a href='main_htmlch7.html#randomised-compiling' id='QQ2-10-193'>Randomised compiling*</a></span>
+<br />   <span class='sectionToc'>7.9 <a href='main_htmlch7.html#references-and-further-reading5'>References and further reading</a></span>
 <br />   <span class='chapterToc'>8 <a href='main_htmlch8.html#cheatsheets'>Cheatsheets</a></span>
 <br />   <span class='sectionToc'>8.1 <a href='main_htmlch8.html#zxcalculus-cheatsheets'>ZX-calculus cheatsheets</a></span>
-<br />   <span class='subsectionToc'>8.1.1 <a href='main_htmlch8.html#generators-and-their-matrices' id='QQ2-11-199'>Generators and their matrices</a></span>
-<br />   <span class='subsectionToc'>8.1.2 <a href='main_htmlch8.html#basic-rewrite-rules' id='QQ2-11-200'>Basic Rewrite rules</a></span>
+<br />   <span class='subsectionToc'>8.1.1 <a href='main_htmlch8.html#generators-and-their-matrices' id='QQ2-11-205'>Generators and their matrices</a></span>
+<br />   <span class='subsectionToc'>8.1.2 <a href='main_htmlch8.html#basic-rewrite-rules' id='QQ2-11-206'>Basic Rewrite rules</a></span>
+<br />   <span class='subsectionToc'>8.1.3 <a href='main_htmlch8.html#derived-rewrite-rules' id='QQ2-11-208'>Derived rewrite rules</a></span>
+<br />   <span class='subsectionToc'>8.1.4 <a href='main_htmlch8.html#zxcalculus-full-cheatsheet' id='QQ2-11-210'>ZX-calculus full cheatsheet</a></span>
+<br />   <span class='sectionToc'>8.2 <a href='main_htmlch8.html#circuits-and-normal-forms'>Circuits and normal forms</a></span>
+<br />   <span class='subsectionToc'>8.2.1 <a href='main_htmlch8.html#unitaries' id='QQ2-11-212'>Unitaries</a></span>
+<br />   <span class='subsectionToc'>8.2.2 <a href='main_htmlch8.html#circuit-identities' id='QQ2-11-214'>Circuit identities</a></span>
+<br />   <span class='sectionToc'>8.3 <a href='main_htmlch8.html#normal-forms-and-types-of-diagrams'>Normal forms and types of diagrams</a></span>
+<br />   <span class='sectionToc'>8.4 <a href='main_htmlch8.html#hbox-cheatsheet'>H-box cheatsheet</a></span>
+<br />   <span class='sectionToc'>8.5 <a href='main_htmlch8.html#scalable-notation-cheatsheet'>Scalable notation cheatsheet</a></span>
 <br />   <span class='chapterToc'>9 <a href='main_htmlch9.html#measurementbased-quantum-computation'>Measurement-based quantum computation</a></span>
-<br />   <span class='sectionToc'>9.1 <a href='main_htmlch9.html#measurement-fragments'>Measurement fragments</a></span>
-<br />   <span class='subsectionToc'>9.1.1 <a href='main_htmlch9.html#universal-resources' id='QQ2-12-203'>Universal resources</a></span>
+<br />   <span class='sectionToc'>9.1 <a href='main_htmlch9.html#measurement-patterns'>Measurement patterns</a></span>
+<br />   <span class='subsectionToc'>9.1.1 <a href='main_htmlch9.html#universal-resources' id='QQ2-12-223'>Universal resources</a></span>
 <br />   <span class='sectionToc'>9.2 <a href='main_htmlch9.html#determinism-and-gflow'>Determinism and gflow</a></span>
-<br />   <span class='subsectionToc'>9.2.1 <a href='main_htmlch9.html#graphlike-zxdiagrams-as-measurement-fragments' id='QQ2-12-205'>Graph-like ZX-diagrams as measurement fragments</a></span>
-<br />   <span class='subsectionToc'>9.2.2 <a href='main_htmlch9.html#the-measurement-correction-game' id='QQ2-12-206'>The measurement correction game</a></span>
-<br />   <span class='subsectionToc'>9.2.3 <a href='main_htmlch9.html#diagrams-with-gflow-are-deterministic-measurement-patterns' id='QQ2-12-207'>Diagrams with gflow are deterministic measurement patterns</a></span>
-<br />   <span class='subsectionToc'>9.2.4 <a href='main_htmlch9.html#from-circuits-to-measurement-patterns' id='QQ2-12-208'>From circuits to measurement patterns</a></span>
-<br />   <span class='subsectionToc'>9.2.5 <a href='main_htmlch9.html#focussed-gflow' id='QQ2-12-209'>Focussed gflow</a></span>
+<br />   <span class='subsectionToc'>9.2.1 <a href='main_htmlch9.html#graphlike-zxdiagrams-as-measurement-patterns' id='QQ2-12-225'>Graph-like ZX-diagrams as measurement patterns</a></span>
+<br />   <span class='subsectionToc'>9.2.2 <a href='main_htmlch9.html#the-measurement-correction-game' id='QQ2-12-226'>The measurement correction game</a></span>
+<br />   <span class='subsectionToc'>9.2.3 <a href='main_htmlch9.html#diagrams-with-gflow-are-deterministic-measurement-patterns' id='QQ2-12-227'>Diagrams with gflow are deterministic measurement patterns</a></span>
+<br />   <span class='subsectionToc'>9.2.4 <a href='main_htmlch9.html#from-circuits-to-measurement-patterns' id='QQ2-12-228'>From circuits to measurement patterns</a></span>
+<br />   <span class='subsectionToc'>9.2.5 <a href='main_htmlch9.html#focussed-gflow' id='QQ2-12-229'>Focussed gflow</a></span>
 <br />   <span class='sectionToc'>9.3 <a href='main_htmlch9.html#optimising-deterministic-measurement-patterns'>Optimising deterministic measurement patterns</a></span>
+<br />   <span class='subsectionToc'>9.3.1 <a href='main_htmlch9.html#parallelising-clifford-measurements' id='QQ2-12-231'>Parallelising Clifford measurements</a></span>
+<br />   <span class='subsectionToc'>9.3.2 <a href='main_htmlch9.html#removing-clifford-vertices-from-measurement-patterns' id='QQ2-12-232'>Removing Clifford vertices from measurement patterns</a></span>
 <br />   <span class='sectionToc'>9.4 <a href='main_htmlch9.html#from-measurement-patterns-to-circuits'>From measurement patterns to circuits</a></span>
 <br />   <span class='sectionToc'>9.5 <a href='main_htmlch9.html#measurements-in-three-planes'>Measurements in three planes</a></span>
-<br />   <span class='subsectionToc'>9.5.1 <a href='main_htmlch9.html#rewriting-plane-gflow' id='QQ2-12-213'>Rewriting 3-plane gflow</a></span>
-<br />   <span class='subsectionToc'>9.5.2 <a href='main_htmlch9.html#circuit-extraction-now-phase-gadget-compatible' id='QQ2-12-214'>Circuit extraction, now phase gadget compatible</a></span>
+<br />   <span class='subsectionToc'>9.5.1 <a href='main_htmlch9.html#rewriting-plane-gflow' id='QQ2-12-235'>Rewriting 3-plane gflow</a></span>
+<br />   <span class='subsectionToc'>9.5.2 <a href='main_htmlch9.html#circuit-extraction-with-phase-gadgets' id='QQ2-12-236'>Circuit extraction with phase gadgets</a></span>
 <br />   <span class='sectionToc'>9.6 <a href='main_htmlch9.html#there-and-back-again'>There and back again</a></span>
 <br />   <span class='sectionToc'>9.7 <a href='main_htmlch9.html#summary-what-to-remember6'>Summary: What to remember</a></span>
 <br />   <span class='sectionToc'>9.8 <a href='main_htmlch9.html#references-and-further-reading6'>References and further reading</a></span>
 <br />   <span class='chapterToc'>10 <a href='main_htmlch10.html#controlled-gates-and-classical-oracles'>Controlled gates and classical oracles</a></span>
 <br />   <span class='sectionToc'>10.1 <a href='main_htmlch10.html#controlled-unitaries1'>Controlled unitaries</a></span>
-<br />   <span class='subsectionToc'>10.1.1 <a href='main_htmlch10.html#the-toffoli-gate' id='QQ2-13-227'>The Toffoli gate</a></span>
-<br />   <span class='subsectionToc'>10.1.2 <a href='main_htmlch10.html#diagonal-controlled-gates-and-phase-polynomials' id='QQ2-13-228'>Diagonal controlled gates and phase polynomials</a></span>
-<br />   <span class='subsectionToc'>10.1.3 <a href='main_htmlch10.html#fourier-transforming-diagonal-unitaries' id='QQ2-13-229'>Fourier transforming diagonal unitaries</a></span>
-<br />   <span class='sectionToc'>10.2 <a href='main_htmlch10.html#hboxes'>H-boxes</a></span>
-<br />   <span class='subsectionToc'>10.2.1 <a href='main_htmlch10.html#and-gates' id='QQ2-13-231'>AND gates</a></span>
-<br />   <span class='subsectionToc'>10.2.2 <a href='main_htmlch10.html#rules-for-the-hbox' id='QQ2-13-232'>Rules for the H-box</a></span>
-<br />   <span class='subsectionToc'>10.2.3 <a href='main_htmlch10.html#constructing-controlled-unitaries-using-hboxes' id='QQ2-13-234'>Constructing controlled unitaries using H-boxes</a></span>
-<br />   <span class='sectionToc'>10.3 <a href='main_htmlch10.html#reversible-logic-synthesis'>Reversible Logic synthesis</a></span>
-<br />   <span class='sectionToc'>10.4 <a href='main_htmlch10.html#constructing-toffoli-gates-with-many-controls'>Constructing Toffoli gates with many controls</a></span>
-<br />   <span class='subsectionToc'>10.4.1 <a href='main_htmlch10.html#quantum-tricks-for-optimising-toffoli-gates' id='QQ2-13-237'>Quantum tricks for optimising Toffoli gates</a></span>
-<br />   <span class='subsectionToc'>10.4.2 <a href='main_htmlch10.html#adding-controls-to-other-quantum-gates' id='QQ2-13-238'>Adding controls to other quantum gates</a></span>
-<br />   <span class='sectionToc'>10.5 <a href='main_htmlch10.html#adders'>Adders</a></span>
-<br />   <span class='sectionToc'>10.6 <a href='main_htmlch10.html#summary-what-to-remember7'>Summary: what to remember</a></span>
-<br />   <span class='sectionToc'>10.7 <a href='main_htmlch10.html#advanced-material4'>Advanced Material*</a></span>
-<br />   <span class='subsectionToc'>10.7.1 <a href='main_htmlch10.html#from-truth-tables-to-toffolis' id='QQ2-13-242'>From truth tables to Toffolis*</a></span>
-<br />   <span class='subsectionToc'>10.7.2 <a href='main_htmlch10.html#level-operators' id='QQ2-13-243'>2-level operators*</a></span>
-<br />   <span class='subsectionToc'>10.7.3 <a href='main_htmlch10.html#more-rules-for-the-hbox' id='QQ2-13-244'>More rules for the H-box*</a></span>
-<br />   <span class='subsectionToc'>10.7.4 <a href='main_htmlch10.html#wspiders' id='QQ2-13-245'>W-spiders*</a></span>
-<br />   <span class='sectionToc'>10.8 <a href='main_htmlch10.html#references-and-further-reading7'>References and further reading</a></span>
-<br />   <span class='chapterToc'>11 <a href='main_htmlch11.html#cliffordt'>Clifford+T</a></span>
-<br />   <span class='sectionToc'>11.1 <a href='main_htmlch11.html#universality-of-cliffordt-circuits'>Universality of Clifford+T circuits</a></span>
+<br />   <span class='subsectionToc'>10.1.1 <a href='main_htmlch10.html#the-toffoli-gate' id='QQ2-13-249'>The Toffoli gate</a></span>
+<br />   <span class='subsectionToc'>10.1.2 <a href='main_htmlch10.html#diagonal-controlled-gates-and-phase-polynomials' id='QQ2-13-250'>Diagonal controlled gates and phase polynomials</a></span>
+<br />   <span class='subsectionToc'>10.1.3 <a href='main_htmlch10.html#fourier-transforming-diagonal-unitaries' id='QQ2-13-251'>Fourier transforming diagonal unitaries</a></span>
                                                                      
 
                                                                      
-<br />   <span class='subsectionToc'>11.1.1 <a href='main_htmlch11.html#exact-synthesis-of-onequbit-gates' id='QQ2-14-253'>Exact synthesis of one-qubit gates</a></span>
-<br />   <span class='subsectionToc'>11.1.2 <a href='main_htmlch11.html#approximating-arbitrary-singlequbit-gates' id='QQ2-14-254'>Approximating arbitrary single-qubit gates</a></span>
+<br />   <span class='sectionToc'>10.2 <a href='main_htmlch10.html#hboxes'>H-boxes</a></span>
+<br />   <span class='subsectionToc'>10.2.1 <a href='main_htmlch10.html#and-gates' id='QQ2-13-253'>AND gates</a></span>
+<br />   <span class='subsectionToc'>10.2.2 <a href='main_htmlch10.html#rules-for-the-hbox' id='QQ2-13-254'>Rules for the H-box</a></span>
+<br />   <span class='subsectionToc'>10.2.3 <a href='main_htmlch10.html#constructing-controlled-unitaries-using-hboxes' id='QQ2-13-256'>Constructing controlled unitaries using H-boxes</a></span>
+<br />   <span class='subsectionToc'>10.2.4 <a href='main_htmlch10.html#graphical-fourier-transform' id='QQ2-13-257'>Graphical Fourier Transform</a></span>
+<br />   <span class='sectionToc'>10.3 <a href='main_htmlch10.html#reversible-logic-synthesis'>Reversible Logic synthesis</a></span>
+<br />   <span class='sectionToc'>10.4 <a href='main_htmlch10.html#constructing-toffoli-gates-with-many-controls'>Constructing Toffoli gates with many controls</a></span>
+<br />   <span class='subsectionToc'>10.4.1 <a href='main_htmlch10.html#quantum-tricks-for-optimising-toffoli-gates' id='QQ2-13-260'>Quantum tricks for optimising Toffoli gates</a></span>
+<br />   <span class='subsectionToc'>10.4.2 <a href='main_htmlch10.html#adding-controls-to-other-quantum-gates' id='QQ2-13-261'>Adding controls to other quantum gates</a></span>
+<br />   <span class='sectionToc'>10.5 <a href='main_htmlch10.html#adders'>Adders</a></span>
+<br />   <span class='sectionToc'>10.6 <a href='main_htmlch10.html#summary-what-to-remember7'>Summary: what to remember</a></span>
+<br />   <span class='sectionToc'>10.7 <a href='main_htmlch10.html#advanced-material4'>Advanced Material*</a></span>
+<br />   <span class='subsectionToc'>10.7.1 <a href='main_htmlch10.html#from-truth-tables-to-toffolis' id='QQ2-13-265'>From truth tables to Toffolis*</a></span>
+<br />   <span class='subsectionToc'>10.7.2 <a href='main_htmlch10.html#level-operators' id='QQ2-13-266'>2-level operators*</a></span>
+<br />   <span class='subsectionToc'>10.7.3 <a href='main_htmlch10.html#more-rules-for-the-hbox' id='QQ2-13-267'>More rules for the H-box*</a></span>
+<br />   <span class='subsectionToc'>10.7.4 <a href='main_htmlch10.html#wspiders' id='QQ2-13-268'>W-spiders*</a></span>
+<br />   <span class='sectionToc'>10.8 <a href='main_htmlch10.html#references-and-further-reading7'>References and further reading</a></span>
+<br />   <span class='chapterToc'>11 <a href='main_htmlch11.html#cliffordt'>Clifford+T</a></span>
+<br />   <span class='sectionToc'>11.1 <a href='main_htmlch11.html#universality-of-cliffordt-circuits'>Universality of Clifford+T circuits</a></span>
+<br />   <span class='subsectionToc'>11.1.1 <a href='main_htmlch11.html#exact-synthesis-of-onequbit-gates' id='QQ2-14-276'>Exact synthesis of one-qubit gates</a></span>
+<br />   <span class='subsectionToc'>11.1.2 <a href='main_htmlch11.html#approximating-arbitrary-singlequbit-gates' id='QQ2-14-277'>Approximating arbitrary single-qubit gates</a></span>
 <br />   <span class='sectionToc'>11.2 <a href='main_htmlch11.html#rewriting-cliffordt-diagrams'>Rewriting Clifford+T diagrams</a></span>
-<br />   <span class='subsectionToc'>11.2.1 <a href='main_htmlch11.html#spider-nests-as-strongly-even-matrices' id='QQ2-14-256'>Spider nests as strongly 3-even matrices</a></span>
-<br />   <span class='subsectionToc'>11.2.2 <a href='main_htmlch11.html#proving-all-spider-nest-identities' id='QQ2-14-257'>Proving all spider nest identities</a></span>
-<br />   <span class='subsectionToc'>11.2.3 <a href='main_htmlch11.html#spider-nests-as-boolean-polynomials' id='QQ2-14-258'>Spider nests as Boolean polynomials</a></span>
+<br />   <span class='subsectionToc'>11.2.1 <a href='main_htmlch11.html#spider-nests-as-strongly-even-matrices' id='QQ2-14-279'>Spider nests as strongly 3-even matrices</a></span>
+<br />   <span class='subsectionToc'>11.2.2 <a href='main_htmlch11.html#proving-all-spider-nest-identities' id='QQ2-14-280'>Proving all spider nest identities</a></span>
+<br />   <span class='subsectionToc'>11.2.3 <a href='main_htmlch11.html#spider-nests-as-boolean-polynomials' id='QQ2-14-281'>Spider nests as Boolean polynomials</a></span>
 <br />   <span class='sectionToc'>11.3 <a href='main_htmlch11.html#advanced-tcount-optimisation'>Advanced T-count optimisation</a></span>
-<br />   <span class='subsectionToc'>11.3.1 <a href='main_htmlch11.html#reedmuller-decoding' id='QQ2-14-260'>Reed-Muller decoding</a></span>
-<br />   <span class='subsectionToc'>11.3.2 <a href='main_htmlch11.html#symmetric-tensor-factorisation' id='QQ2-14-261'>Symmetric 3-tensor factorisation</a></span>
+<br />   <span class='subsectionToc'>11.3.1 <a href='main_htmlch11.html#reedmuller-decoding' id='QQ2-14-283'>Reed-Muller decoding</a></span>
+<br />   <span class='subsectionToc'>11.3.2 <a href='main_htmlch11.html#symmetric-tensor-factorisation' id='QQ2-14-284'>Symmetric 3-tensor factorisation</a></span>
 <br />   <span class='sectionToc'>11.4 <a href='main_htmlch11.html#catalysis'>Catalysis</a></span>
-<br />   <span class='subsectionToc'>11.4.1 <a href='main_htmlch11.html#catalysis-as-a-resource-for-compilation' id='QQ2-14-263'>Catalysis as a resource for compilation</a></span>
-<br />   <span class='subsectionToc'>11.4.2 <a href='main_htmlch11.html#computational-universality-via-catalysis' id='QQ2-14-264'>Computational universality via catalysis</a></span>
-<br />   <span class='subsectionToc'>11.4.3 <a href='main_htmlch11.html#catalysing-completeness' id='QQ2-14-265'>Catalysing completeness</a></span>
+<br />   <span class='subsectionToc'>11.4.1 <a href='main_htmlch11.html#catalysis-as-a-resource-for-compilation' id='QQ2-14-286'>Catalysis as a resource for compilation</a></span>
+<br />   <span class='subsectionToc'>11.4.2 <a href='main_htmlch11.html#computational-universality-via-catalysis' id='QQ2-14-287'>Computational universality via catalysis</a></span>
 <br />   <span class='sectionToc'>11.5 <a href='main_htmlch11.html#summary-what-to-remember8'>Summary: What to remember</a></span>
 <br />   <span class='sectionToc'>11.6 <a href='main_htmlch11.html#advanced-material5'>Advanced Material*</a></span>
-<br />   <span class='subsectionToc'>11.6.1 <a href='main_htmlch11.html#exact-synthesis-of-cliffordt-states' id='QQ2-14-268'>Exact synthesis of Clifford+T states*</a></span>
-<br />   <span class='subsectionToc'>11.6.2 <a href='main_htmlch11.html#exact-unitary-synthesis' id='QQ2-14-269'>Exact unitary synthesis*</a></span>
-<br />   <span class='subsectionToc'>11.6.3 <a href='main_htmlch11.html#approximate-singlequbit-cliffordt-synthesis' id='QQ2-14-271'>Approximate single-qubit Clifford+T synthesis*</a></span>
-<br />   <span class='subsectionToc'>11.6.4 <a href='main_htmlch11.html#computational-universality-of-toffolihadamard' id='QQ2-14-272'>Computational universality of Toffoli-Hadamard*</a></span>
+<br />   <span class='subsectionToc'>11.6.1 <a href='main_htmlch11.html#exact-synthesis-of-cliffordt-states' id='QQ2-14-290'>Exact synthesis of Clifford+T states*</a></span>
+<br />   <span class='subsectionToc'>11.6.2 <a href='main_htmlch11.html#exact-unitary-synthesis' id='QQ2-14-291'>Exact unitary synthesis*</a></span>
+<br />   <span class='subsectionToc'>11.6.3 <a href='main_htmlch11.html#approximate-singlequbit-cliffordt-synthesis' id='QQ2-14-293'>Approximate single-qubit Clifford+T synthesis*</a></span>
+<br />   <span class='subsectionToc'>11.6.4 <a href='main_htmlch11.html#computational-universality-of-toffolihadamard' id='QQ2-14-294'>Computational universality of Toffoli-Hadamard*</a></span>
+<br />   <span class='subsectionToc'>11.6.5 <a href='main_htmlch11.html#catalysing-completeness' id='QQ2-14-295'>Catalysing completeness*</a></span>
 <br />   <span class='sectionToc'>11.7 <a href='main_htmlch11.html#references-and-further-reading8'>References and further reading</a></span>
-<br />   <span class='chapterToc'>12 <a href='main_htmlch12.html#quantum-error-correction'>Quantum error correction</a></span>
-<br />   <span class='sectionToc'>12.1 <a href='main_htmlch12.html#classical-codes-and-parameters'>Classical codes and parameters</a></span>
-<br />   <span class='sectionToc'>12.2 <a href='main_htmlch12.html#quantum-stabiliser-codes'>Quantum stabiliser codes</a></span>
-<br />   <span class='subsectionToc'>12.2.1 <a href='main_htmlch12.html#code-distance-for-stabiliser-codes' id='QQ2-15-284'>Code distance for stabiliser codes</a></span>
-<br />   <span class='subsectionToc'>12.2.2 <a href='main_htmlch12.html#detecting-and-correcting-quantum-errors' id='QQ2-15-285'>Detecting and correcting quantum errors</a></span>
-<br />   <span class='subsectionToc'>12.2.3 <a href='main_htmlch12.html#encoders-and-logical-operators' id='QQ2-15-286'>Encoders and logical operators</a></span>
-<br />   <span class='subsectionToc'>12.2.4 <a href='main_htmlch12.html#the-decoder' id='QQ2-15-287'>The decoder</a></span>
-<br />   <span class='sectionToc'>12.3 <a href='main_htmlch12.html#css-codes'>CSS codes</a></span>
-<br />   <span class='subsectionToc'>12.3.1 <a href='main_htmlch12.html#stabilisers-and-pauli-zx-diagrams' id='QQ2-15-289'>Stabilisers and Pauli ZX diagrams</a></span>
-<br />   <span class='subsectionToc'>12.3.2 <a href='main_htmlch12.html#maximal-css-codes-as-zx-diagrams' id='QQ2-15-290'>Maximal CSS codes as ZX diagrams</a></span>
-<br />   <span class='subsectionToc'>12.3.3 <a href='main_htmlch12.html#nonmaximal-css-codes-as-zx-encoder-maps' id='QQ2-15-291'>Non-maximal CSS codes as ZX encoder maps</a></span>
-<br />   <span class='subsectionToc'>12.3.4 <a href='main_htmlch12.html#the-surface-code' id='QQ2-15-292'>The surface code</a></span>
-<br />   <span class='subsectionToc'>12.3.5 <a href='main_htmlch12.html#scalable-zx-notation-for-css-codes' id='QQ2-15-294'>Scalable ZX notation for CSS codes</a></span>
-<br />   <span class='sectionToc'>12.4 <a href='main_htmlch12.html#faulttolerance'>Fault-tolerance</a></span>
-<br />   <span class='subsectionToc'>12.4.1 <a href='main_htmlch12.html#faulttolerant-computation-with-transversal-gates' id='QQ2-15-296'>Fault-tolerant computation with transversal gates</a></span>
-<br />   <span class='subsectionToc'>12.4.2 <a href='main_htmlch12.html#faulttolerant-pauli-measurements' id='QQ2-15-300'>Fault-tolerant Pauli measurements</a></span>
-<br />   <span class='subsectionToc'>12.4.3 <a href='main_htmlch12.html#lattice-surgery' id='QQ2-15-301'>Lattice surgery</a></span>
-<br />   <span class='sectionToc'>12.5 <a href='main_htmlch12.html#magic-state-distillation'>Magic state distillation</a></span>
-<br />   <span class='subsectionToc'>12.5.1 <a href='main_htmlch12.html#ccz-distillation-and-catalysis' id='QQ2-15-303'>CCZ distillation and catalysis</a></span>
-<br />   <span class='sectionToc'>12.6 <a href='main_htmlch12.html#summary-what-to-remember9'>Summary: What to remember</a></span>
-<br />   <span class='sectionToc'>12.7 <a href='main_htmlch12.html#references-and-further-reading9'>References and Further Reading</a></span>
+<br />   <span class='chapterToc'>12 <a href='main_htmlch12.html#faulttolerant-quantum-computation'>Fault-tolerant quantum computation</a></span>
+<br />   <span class='sectionToc'>12.1 <a href='main_htmlch12.html#quantum-stabiliser-codes'>Quantum stabiliser codes</a></span>
+<br />   <span class='subsectionToc'>12.1.1 <a href='main_htmlch12.html#classical-codes-and-code-distance' id='QQ2-15-306'>Classical codes and code distance</a></span>
+<br />   <span class='subsectionToc'>12.1.2 <a href='main_htmlch12.html#defining-stabiliser-codes' id='QQ2-15-307'>Defining stabiliser codes</a></span>
+<br />   <span class='subsectionToc'>12.1.3 <a href='main_htmlch12.html#code-distance-for-stabiliser-codes' id='QQ2-15-308'>Code distance for stabiliser codes</a></span>
+                                                                     
+
+                                                                     
+<br />   <span class='subsectionToc'>12.1.4 <a href='main_htmlch12.html#detecting-and-correcting-generic-errors' id='QQ2-15-309'>Detecting and correcting generic errors</a></span>
+<br />   <span class='subsectionToc'>12.1.5 <a href='main_htmlch12.html#encoders-and-logical-operators' id='QQ2-15-310'>Encoders and logical operators</a></span>
+<br />   <span class='subsectionToc'>12.1.6 <a href='main_htmlch12.html#the-decoder' id='QQ2-15-311'>The decoder</a></span>
+<br />   <span class='sectionToc'>12.2 <a href='main_htmlch12.html#css-codes'>CSS codes</a></span>
+<br />   <span class='subsectionToc'>12.2.1 <a href='main_htmlch12.html#stabilisers-and-pauli-zx-diagrams' id='QQ2-15-313'>Stabilisers and Pauli ZX diagrams</a></span>
+<br />   <span class='subsectionToc'>12.2.2 <a href='main_htmlch12.html#maximal-css-codes-as-zx-diagrams' id='QQ2-15-314'>Maximal CSS codes as ZX diagrams</a></span>
+<br />   <span class='subsectionToc'>12.2.3 <a href='main_htmlch12.html#nonmaximal-css-codes-as-zx-encoder-maps' id='QQ2-15-315'>Non-maximal CSS codes as ZX encoder maps</a></span>
+<br />   <span class='subsectionToc'>12.2.4 <a href='main_htmlch12.html#the-surface-code' id='QQ2-15-316'>The surface code</a></span>
+<br />   <span class='subsectionToc'>12.2.5 <a href='main_htmlch12.html#scalable-zx-notation-for-css-codes' id='QQ2-15-318'>Scalable ZX notation for CSS codes</a></span>
+<br />   <span class='sectionToc'>12.3 <a href='main_htmlch12.html#faulttolerance'>Fault-tolerance</a></span>
+<br />   <span class='subsectionToc'>12.3.1 <a href='main_htmlch12.html#faulttolerant-computation-with-transversal-gates' id='QQ2-15-320'>Fault-tolerant computation with transversal gates</a></span>
+<br />   <span class='subsectionToc'>12.3.2 <a href='main_htmlch12.html#transversal-measurements' id='QQ2-15-324'>Transversal measurements</a></span>
+<br />   <span class='subsectionToc'>12.3.3 <a href='main_htmlch12.html#faulttolerant-stabiliser-measurements' id='QQ2-15-325'>Fault-tolerant stabiliser measurements</a></span>
+<br />   <span class='subsectionToc'>12.3.4 <a href='main_htmlch12.html#lattice-surgery' id='QQ2-15-326'>Lattice surgery</a></span>
+<br />   <span class='subsectionToc'>12.3.5 <a href='main_htmlch12.html#magic-state-distillation' id='QQ2-15-327'>Magic state distillation</a></span>
+<br />   <span class='sectionToc'>12.4 <a href='main_htmlch12.html#putting-it-all-together2'>Putting it all together</a></span>
+<br />   <span class='sectionToc'>12.5 <a href='main_htmlch12.html#summary-what-to-remember9'>Summary: What to remember</a></span>
+<br />   <span class='sectionToc'>12.6 <a href='main_htmlch12.html#references-and-further-reading9'>References and Further Reading</a></span>
    </div>
                                                                      
 
                                                                      
-   <p id='about-this-version'><a id='likesection.1'></a><a id='x2-1001x'></a><a id='Q1-2-2'></a>
+<!-- l. 30 --><p class='indent'>
                                                                      
 
                                                                      
-   </p><!-- l. 14 --><div class='crosslinks'><p class='noindent'>[<a href='main_htmlli2.html'>next</a>] [<a href='main_html.html'>prev</a>] [<a href='main_html.html#tailmain_html'>prev-tail</a>] [<a href='main_htmlli1.html'>front</a>] [<a href='main_html.html#main_htmlli1.html'>up</a>] </p></div>
-<!-- l. 14 --><p class='indent'>   <a id='tailmain_htmlli1.html'></a> </p> 
-<script type="text/javascript" src="proof_collapse.js"></script> 
-<script type="text/javascript" src="navigation_menu.js"></script>
-<script type="text/javascript" src="update_figure_margins.js"></script></body> 
+</p><!-- l. 33 --><p class='indent' id='about-this-version'>   <a id='likesection.1'></a><a id='x2-1001x'></a><a id='Q1-2-2'></a>
+                                                                     
+
+                                                                     
+</p>
+   <!-- l. 35 --><div class='crosslinks'><p class='noindent'>  <a href='main_htmlli2.html'>Next Chapter</a>    <a href='main_html.html'>Previous Chapter</a>    <a href='main_html.html#main_htmlli1.html'>Contents</a>  </p></div>
+    
+</body> 
 </html>
